@@ -2,7 +2,6 @@
 
 首页链接：https://www.huhu.chat   
 API接口文档链接：https://doc.huhu.chat  
-项目背景：平时也有在记录博客，就想着做一个论坛社区，也可以去巩固一下自己学过的知识  
 技术栈：WebApi + Recat + MySQL + Redis   
 项目结构：三层架构+工厂模式   
 使用到的技术：  
