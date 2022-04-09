@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="huhuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin_all">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="power" Type="Int32" Nullable="false" />
+    <Property Name="audit_status" Type="Int32" Nullable="false" />
+    <Property Name="update_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="register_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="admin_manager">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admin_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ip" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="location" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="advert_all">
+    <Key>
+      <PropertyRef Name="advert_id" />
+    </Key>
+    <Property Name="advert_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="brief" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="picture" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="advert_type" Type="Int32" Nullable="false" />
+    <Property Name="rank" Type="Int32" Nullable="false" />
+    <Property Name="start_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="audit_status" Type="Int64" Nullable="false" />
+    <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="area_code_all">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="area_name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="area_short_name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="area_code" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="regulation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_comment">
+    <Key>
+      <PropertyRef Name="comment_id" />
+    </Key>
+    <Property Name="comment_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comment_content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_draft">
+    <Key>
+      <PropertyRef Name="draft_id" />
+    </Key>
+    <Property Name="draft_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="brief_content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mark_content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cover_image" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tag_ids" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="edit_type" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_reply">
+    <Key>
+      <PropertyRef Name="reply_id" />
+    </Key>
+    <Property Name="reply_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reply_comment_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reply_content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reply_to_reply_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reply_to_user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reply_type" Type="Int32" Nullable="false" />
+    <Property Name="reply_status" Type="Int32" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_view">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="view_count" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="feedback_all">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pic_list" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="audit_status" Type="Int32" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notify_all">
+    <Key>
+      <PropertyRef Name="notify_id" />
+    </Key>
+    <Property Name="notify_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="detail" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="notify_type" Type="Int32" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="report_all">
+    <Key>
+      <PropertyRef Name="report_id" />
+    </Key>
+    <Property Name="report_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="issue" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prove_pic" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="describe" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="report_option">
+    <Key>
+      <PropertyRef Name="option_id" />
+    </Key>
+    <Property Name="option_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="option_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="topic_all">
+    <Key>
+      <PropertyRef Name="topic_id" />
+    </Key>
+    <Property Name="topic_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="topic_circle_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pic_list" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="url" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="topic" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="topic_circle">
+    <Key>
+      <PropertyRef Name="circle_id" />
+    </Key>
+    <Property Name="circle_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="circle_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="icon" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_collect">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="collection_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="item_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_collection">
+    <Key>
+      <PropertyRef Name="collection_id" />
+    </Key>
+    <Property Name="collection_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="collection_name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_digg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="digg_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_follow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="follow_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="follow_type" Type="Int32" Nullable="false" />
+    <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_locate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ip" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="place" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mac" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="huhuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin_all" EntityType="Self.admin_all" />
+    <EntitySet Name="admin_manager" EntityType="Self.admin_manager" />
+    <EntitySet Name="advert_all" EntityType="Self.advert_all" />
+    <EntitySet Name="area_code_all" EntityType="Self.area_code_all" />
+    <EntitySet Name="article_comment" EntityType="Self.article_comment" />
+    <EntitySet Name="article_draft" EntityType="Self.article_draft" />
+    <EntitySet Name="article_reply" EntityType="Self.article_reply" />
+    <EntitySet Name="article_view" EntityType="Self.article_view" />
+    <EntitySet Name="feedback_all" EntityType="Self.feedback_all" />
+    <EntitySet Name="notify_all" EntityType="Self.notify_all" />
+    <EntitySet Name="report_all" EntityType="Self.report_all" />
+    <EntitySet Name="report_option" EntityType="Self.report_option" />
+    <EntitySet Name="topic_all" EntityType="Self.topic_all" />
+    <EntitySet Name="topic_circle" EntityType="Self.topic_circle" />
+    <EntitySet Name="user_collect" EntityType="Self.user_collect" />
+    <EntitySet Name="user_collection" EntityType="Self.user_collection" />
+    <EntitySet Name="user_digg" EntityType="Self.user_digg" />
+    <EntitySet Name="user_follow" EntityType="Self.user_follow" />
+    <EntitySet Name="user_locate" EntityType="Self.user_locate" />
+    <EntitySet Name="article_all" EntityType="huhuModel.article_all" />
+    <EntitySet Name="article_tag" EntityType="huhuModel.article_tag" />
+    <EntitySet Name="user_all" EntityType="huhuModel.user_all" />
+  </EntityContainer>
+  <EntityType Name="article_all">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="cover_image" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="brief_content" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="mark_content" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="tag_ids" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="edit_type" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="audit_status" Type="Int32" Nullable="false" />
+    <Property Name="mtime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="ctime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="article_tag">
+    <Key>
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="tag_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="tag_name" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="back_ground" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="mtime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="ctime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user_all">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="avatar_large" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="phone_verified" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="email_verified" Type="Int32" Nullable="false" />
+    <Property Name="qq_openid" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="qq_nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="qq_figureurl" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="qq_verified" Type="Int32" Nullable="false" />
+    <Property Name="wechat_nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="wechat_verified" Type="Int32" Nullable="false" />
+    <Property Name="weibo_nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="weibo_verified" Type="Int32" Nullable="false" />
+    <Property Name="job_title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ip_address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="place" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="update_time" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="register_time" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

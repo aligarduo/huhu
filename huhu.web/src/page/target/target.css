@@ -1,0 +1,85 @@
+.target-page {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    max-width: 624px;
+    width: 86%;
+    background-color: #fff;
+    transform: translateX(-50%);
+    padding: 30px 40px 3px;
+    box-sizing: border-box;
+    border: 1px solid #e5e6eb;
+    border-radius: 12px;
+}
+
+.target-page .target-logo {
+    position: absolute;
+    top: -47px;
+    left: 5px;
+    width: 92px;
+    height: 32px;
+    background-image: url(../../assets/images/logo/logo_icon.svg);
+    background-size: cover;
+}
+
+.target-page .target-content {
+    border-bottom:1px solid #ddd;
+    border-image: -webkit-linear-gradient(rgb(185, 185, 185), rgb(240, 237, 237)) 20 20;
+    border-image: -moz-linear-gradient(rgb(185, 185, 185), rgb(240, 237, 237)) 20 20;
+    border-image: -o-linear-gradient(rgb(185, 185, 185), rgb(240, 237, 237)) 20 20;
+    border-image: linear-gradient(rgb(185, 185, 185), rgb(240, 237, 237)) 20 20;
+}
+
+
+.target-page .target-content .target-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.target-page .target-content .target-link-container {
+    position: relative;
+    color: gray;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    padding: 16px 0 28px 0;
+}
+
+.target-page .target-content .target-link-container .target-link-content {
+    overflow: hidden;
+    word-break: break-all;
+    line-height: 22px;
+}
+
+.target-page .target-content .target-btn {
+    width: 84px;
+    float: right;
+    margin: 10px 0;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    background: #007fff;
+    height: 32px;
+    font-size: 14px;
+    padding: 0 14px;
+    cursor: pointer;
+    outline: 0;
+}
+
+@media (max-width: 600px){
+    .target-page{
+        padding: 25px 30px 3px;
+    }
+}
+
+@media (max-width: 445px){
+    .target-page .target-content .target-title{
+        color: #333;
+        font-size: 16px;
+        font-weight: 700;
+        display: inline-grid;
+    }
+    .target-page .target-content .target-title span:last-child{
+        margin-top: 5px;
+    }
+}

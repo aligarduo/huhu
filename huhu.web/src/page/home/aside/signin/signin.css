@@ -1,0 +1,52 @@
+.byte-loading-parent--relative {
+	position: relative !important
+}
+
+.byte-loading-parent--hidden {
+	overflow: hidden !important
+}
+
+.byte-loading {
+	transition: opacity .3s;
+	color: #3370ff;
+	z-index: 999
+}
+
+.byte-loading--fullscreen {
+	position: fixed
+}
+
+.byte-loading__spinner {
+	text-align: center;
+	margin: 12px 0
+}
+
+.byte-loading__spinner .circular {
+	width: 30px;
+	height: 30px;
+	vertical-align: top;
+	-webkit-animation: loading-rotate 1s linear infinite;
+	animation: loading-rotate 1s linear infinite
+}
+
+.byte-loading__text {
+	margin-top: 8px;
+	font-size: 12px
+}
+
+@-webkit-keyframes loading-rotate {
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+@keyframes loading-rotate {
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+.signin-svg {
+	width: 2.18rem;
+	margin-right: 10px;
+}

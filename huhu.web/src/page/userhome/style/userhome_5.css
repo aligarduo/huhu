@@ -1,0 +1,305 @@
+@font-face {
+	font-family: "iconfont";
+	src: url(https://b-gold-cdn.xitu.io/fonts/iconfont.eot?t=1470110358);
+	src: url(https://b-gold-cdn.xitu.io/fonts/iconfont.eot?t=1470110358#iefix) format("embedded-opentype"), url(https://b-gold-cdn.xitu.io/fonts/iconfont.woff?t=1470110358) format("woff"), url(https://b-gold-cdn.xitu.io/fonts/iconfont.ttf?t=1470110358) format("truetype"), url(https://b-gold-cdn.xitu.io/fonts/iconfont.svg?t=1470110358#iconfont) format("svg")
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.icon-xlcollection:before {
+	content: "\e600"
+}
+
+.icon-xlchatbox:before {
+	content: "\e601"
+}
+
+.detail-list.sticky-box {
+	padding-top: 4.167rem
+}
+
+.list-header {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 4.167rem;
+	background-color: #fff;
+	border-radius: .2rem .2rem 0 0;
+	border-bottom: 1px solid #ebebeb;
+	z-index: 100;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.list-header.sticky {
+	position: fixed;
+	top: 5rem;
+	left: 0;
+	right: 0;
+	border-radius: 0;
+	transition: all .2s
+}
+
+.list-header.sticky.top {
+	top: 0
+}
+
+.list-header.sticky .avatar,
+.list-header.sticky .btn {
+	display: block
+}
+
+.list-header .header-content {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	height: 100%;
+	max-width: 960px;
+	white-space: nowrap
+}
+
+@media (min-width:960px) {
+	.list-header .header-content .only-in-scroll-mode {
+		display: none
+	}
+}
+
+@media (max-width:960px) {
+	.list-header .header-content {
+		max-width: none;
+		overflow-x: auto
+	}
+
+	.list-header .header-content .not-in-scroll-mode {
+		display: none
+	}
+}
+
+.list-header .avatar {
+	flex: 0 0 auto;
+	margin: 0 1.6rem;
+	width: 2.833rem;
+	height: 2.833rem;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none
+}
+
+.list-header .nav-item {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 5.2rem;
+	height: 100%;
+	margin: 0 8px;
+	padding: 0;
+}
+
+.list-header .nav-item:not(.active):not(.open):hover .item-count,
+.list-header .nav-item:not(.active):not(.open):hover .item-title {
+	opacity: .8
+}
+
+.list-header .nav-item.active {
+	border-bottom: 0.18rem solid #3780f7
+}
+
+.list-header .nav-item.active .item-count,
+.list-header .nav-item.active .item-title {
+	color: #3780f7
+}
+
+.list-header .nav-item .item-title {
+	font-size: 1.333rem;
+	font-weight: 500;
+	color: #31445b
+}
+
+.list-header .nav-item .item-count {
+	margin-left: .4rem;
+	font-size: 1.25rem;
+	color: #b2bac2;
+	line-height: 1
+}
+
+.list-header .nav-item.more .item-count {
+	padding-top: .2em
+}
+
+.list-header .nav-item .more-panel {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: 0 0 0 -3.75rem;
+	padding: .6rem 0;
+	width: 7.5rem;
+	background-color: #fff;
+	border: 1px solid #f3f3f4;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+	z-index: 1
+}
+
+.list-header .nav-item .more-panel:after,
+.list-header .nav-item .more-panel:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%
+}
+
+.list-header .nav-item .more-panel:before {
+	margin: -7px 0 0 -7px;
+	border: 7px solid transparent;
+	border-top: none;
+	border-bottom: 7px solid #f3f3f4
+}
+
+.list-header .nav-item .more-panel:after {
+	margin: -6px 0 0 -6px;
+	border: 6px solid transparent;
+	border-top: none;
+	border-bottom: 6px solid #fff
+}
+
+.list-header .nav-item .more-panel .more-item {
+	display: block;
+	padding: .6rem 0;
+	font-size: 1.25rem;
+	text-align: center;
+	color: #000
+}
+
+.list-header .nav-item .more-panel .more-item:hover {
+	background-color: #fcfcfc
+}
+
+.list-header .nav-item .more-panel .more-item.active {
+	color: #3780f7
+}
+
+.list-header .btn {
+	flex: 0 0 auto;
+	margin: 0 0 0 auto;
+	padding: 0;
+	height: 2.834rem;
+	font-size: 1.333rem;
+	font-weight: 500;
+	line-height: 1.2;
+	border: 1px solid;
+	background-color: #fff;
+	border-radius: 4px;
+	display: none
+}
+
+.list-header .btn:hover {
+	opacity: .8
+}
+
+.list-header .follow-btn {
+	width: 9rem;
+	color: #6cbd45
+}
+
+.list-header .follow-btn.active {
+	color: #fff;
+	background-color: #6cbd45;
+	border-color: #6cbd45
+}
+
+.list-header .setting-btn {
+	width: 9.834rem;
+	color: #3780f7
+}
+
+.list-body{
+	background-color: transparent;
+	border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.list-body .sub-header,
+.list-body .sub-header {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 2.4rem;
+	height: 4.167rem;
+	white-space: nowrap;
+	border-bottom: 2px solid rgba(230, 230, 231, .5)
+}
+
+.list-body .sub-header .sub-header-title,
+.list-body .sub-header .sub-header-title {
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #000
+}
+
+.list-body .sub-header .sub-type-box,
+.list-body .sub-header .sub-type-box {
+	margin-left: auto
+}
+
+.list-body .sub-header .sub-type-box .sub-type,
+.list-body .sub-header .sub-type-box .sub-type {
+	position: relative;
+	padding: 1rem 0;
+	font-size: 1.167rem;
+	color: #72777b
+}
+
+.list-body .sub-header .sub-type-box .sub-type.active,
+.list-body .sub-header .sub-type-box .sub-type.active {
+	color: #000
+}
+
+.list-body .sub-header .sub-type-box .sub-type:hover,
+.list-body .sub-header .sub-type-box .sub-type:hover {
+	opacity: .8
+}
+
+.list-body .sub-header .sub-type-box .sub-type:not(:last-child),
+.list-body .sub-header .sub-type-box .sub-type:not(:last-child) {
+	margin-right: 2rem
+}
+
+.list-body .sub-header .sub-type-box .sub-type:not(:last-child):after,
+.list-body .sub-header .sub-type-box .sub-type:not(:last-child):after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -1rem;
+	margin-top: -.5em;
+	width: 1px;
+	height: 1em;
+	background-color: #b2bac2;
+	opacity: .5
+}
+
+.entry .content-box {
+	padding-left: 2.4rem;
+	padding-right: 2.4rem
+}
+
+.collection-list-box ul.collection-list {
+	padding-bottom: 1.2rem
+}
+
+.collection-list-box ul.collection-list .item {
+	width: 100%
+}
+
+@media (max-width:600px) {
+	.collection-list-box ul.collection-list .item {
+		width: 100%
+	}
+}

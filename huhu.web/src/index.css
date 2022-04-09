@@ -1,0 +1,565 @@
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+body {
+	margin: 0;
+	background-color: #f8fafc;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0
+}
+
+progress {
+	vertical-align: baseline
+}
+
+[hidden],
+template {
+	display: none
+}
+
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects
+}
+
+a:active,
+a:hover {
+	outline-width: 0
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	-webkit-text-decoration: underline dotted;
+	text-decoration: underline dotted
+}
+
+b,
+strong {
+	font-weight: inherit;
+	font-weight: bolder
+}
+
+dfn {
+	font-style: italic
+}
+
+h1 {
+	font-size: 2em;
+	margin: .67em 0
+}
+
+mark {
+	background-color: #ff0;
+	color: #000
+}
+
+small {
+	font-size: 80%
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline
+}
+
+sub {
+	bottom: -.25em
+}
+
+sup {
+	top: -.5em
+}
+
+img {
+	border-style: none
+}
+
+svg:not(:root) {
+	overflow: hidden
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em
+}
+
+figure {
+	margin: 1em 40px
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+	margin: 0
+}
+
+optgroup {
+	font-weight: 700
+}
+
+button,
+input {
+	overflow: visible
+}
+
+button,
+select {
+	text-transform: none
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+	-webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+	border-style: none;
+	padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+	outline: 1px dotted ButtonText
+}
+
+textarea {
+	overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+	box-sizing: border-box;
+	padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+	height: auto
+}
+
+[type=search] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: .54
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit
+}
+
+@-webkit-keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+@keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+body {
+	font-size: 12px;
+	line-height: normal
+}
+
+a,
+button,
+input {
+	margin: initial
+}
+
+img {
+	width: auto;
+	height: auto;
+	vertical-align: initial;
+}
+
+#huhu {
+	overflow-x: visible;
+	overflow-x: initial
+}
+
+html {
+	font-size: 12px;
+	font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial;
+	word-break: break-word;
+	text-rendering: optimizeLegibility;
+	color: #333;
+}
+
+html.white {
+	background-color: #fff
+}
+
+body {
+	word-break: break-word;
+	overflow-y: scroll
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #909090
+}
+
+a:hover {
+	color: #1d2129
+}
+
+button:disabled {
+	cursor: not-allowed
+}
+
+button.disabled,
+button.disabled:hover {
+	background-color: #d2d2d2;
+	cursor: not-allowed
+}
+
+ul {
+	padding: 0;
+	margin: 0
+}
+
+li {
+	list-style: none
+}
+
+.text-bold,
+b,
+strong {
+	font-weight: 700
+}
+
+.button,
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #007fff;
+	color: #fff;
+	border-radius: 2px;
+	border: none;
+	padding: .5rem 1.3rem;
+	outline: none;
+	transition: background-color .3s, color .3s;
+}
+
+.button:hover,
+button:hover {
+	/* background-color: #0371df; */
+	color: #fff
+}
+
+i+span {
+	margin-left: .6rem
+}
+
+button+button {
+	margin-left: .8rem
+}
+
+input[type=radio] {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #bfcbd9;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;
+	position: relative;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none
+}
+
+input[type=radio]:after {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #fff;
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: transform .15s cubic-bezier(.71, -.46, .88, .6)
+}
+
+input[type=radio]:checked {
+	border-color: #20a0ff;
+	background: #3a9afc
+}
+
+input[type=radio]:checked:after {
+	transform: translate(-50%, -50%) scale(1)
+}
+
+input[type=radio]:disabled {
+	background-color: #eef1f6;
+	border-color: #d1dbe5;
+	cursor: not-allowed
+}
+
+input[type=radio]:disabled:checked {
+	border-color: #d1dbe5;
+	background-color: #d1dbe5
+}
+
+input[name=registerSmsCode]::-webkit-contacts-auto-fill-button {
+	display: none;
+	visibility: hidden
+}
+
+@-webkit-keyframes busy-ani {
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+@keyframes busy-ani {
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+.open-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 4px rgb(56 142 255 / 16%);
+    background: #1d7dfa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+.open-button{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.app-open-button {
+    position: fixed;
+    bottom: 6.0rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+}
+
+.app-open-button.hide {
+	animation: open-app-hide .3s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes open-app-hide {
+	0% {
+		bottom: 6.0rem;
+	}
+	100% {
+		bottom: -3.6rem
+	}
+}
+
+.app-open-button.show {
+	animation: open-app-show .3s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes open-app-show {
+	0% {
+		bottom: -3.6rem
+	}
+	100% {
+		bottom: 6.0rem;
+	}
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image {
+	z-index: 999;
+}
+
+/* pc端 */
+.not-select{
+    -moz-user-select:none; /*火狐*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -ms-user-select:none; /*IE10*/
+    -khtml-user-select:none; /*早期浏览器*/
+    user-select:none;
+}
+
+/* 移动 */
+.no-touch {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+#nprogress {
+	pointer-events: none;
+}
+  
+#nprogress .bar {
+	background: #06f;
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+}
+  
+#nprogress .peg {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px #06f, 0 0 5px #06f;
+	opacity: 1.0;
+	-webkit-transform: rotate(3deg) translate(0px, -4px);
+	-ms-transform: rotate(3deg) translate(0px, -4px);
+	transform: rotate(3deg) translate(0px, -4px);
+}
+  
+#nprogress .spinner {
+	display: block;
+	position: fixed;
+	z-index: 1031;
+	top: 15px;
+	right: 15px;
+}
+  
+#nprogress .spinner-icon {
+	width: 18px;
+	height: 18px;
+	box-sizing: border-box;
+	border: solid 2px transparent;
+	border-top-color: #06f;
+	border-left-color: #06f;
+	border-radius: 50%;
+	-webkit-animation: nprogress-spinner 400ms linear infinite;
+	animation: nprogress-spinner 400ms linear infinite;
+}
+  
+.nprogress-custom-parent {
+	overflow: hidden;
+	position: relative;
+}
+  
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+	position: absolute;
+}
+  
+@-webkit-keyframes nprogress-spinner {
+	0%   { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes nprogress-spinner {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+#nprogress .spinner{
+	display: none;
+}
+
+/*头像弹跳效果*/
+.bounce-effect:hover{
+	animation: bounce-effect-animation 1s .2s ease both;
+}
+
+@keyframes bounce-effect-animation {
+	0% {-webkit-transform: scale(1);}
+	10%, 20% {-webkit-transform: scale(.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+	100% {-webkit-transform: scale(1) rotate(0);}
+}

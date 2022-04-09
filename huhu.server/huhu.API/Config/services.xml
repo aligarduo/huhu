@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	
+	<object name="ArticleService" type="huhu.BLL.ArticleService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ArticleDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ArticleTagService" type="huhu.BLL.ArticleTagService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ArticleTagDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="UserService" type="huhu.BLL.UserService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="UserDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="AreaCodeService" type="huhu.BLL.AreaCodeService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="AreaCodeDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="AdvertService" type="huhu.BLL.AdvertService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="AdvertDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ArticleDraftService" type="huhu.BLL.ArticleDraftService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ArticleDraftDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="DiggService" type="huhu.BLL.DiggService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="DiggDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ArticleViewService" type="huhu.BLL.ArticleViewService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ArticleViewDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ArticleCommentService" type="huhu.BLL.ArticleCommentService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ArticleCommentDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ArticleReplyService" type="huhu.BLL.ArticleReplyService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ArticleReplyDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="FollowService" type="huhu.BLL.FollowService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="FollowDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+	
+	<object name="UserCollectionService" type="huhu.BLL.UserCollectionService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="UserCollectionDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="UserCollectService" type="huhu.BLL.UserCollectService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="UserCollectDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="FeedBackService" type="huhu.BLL.FeedBackService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="FeedBackDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="AdminService" type="huhu.BLL.AdminService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="AdminDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="AdminManagerService" type="huhu.BLL.AdminManagerService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="AdminManagerDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="TopicService" type="huhu.BLL.TopicService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="TopicDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="TopicCircleService" type="huhu.BLL.TopicCircleService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="TopicCircleDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ReportOptionService" type="huhu.BLL.ReportOptionService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ReportOptionDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="ReportService" type="huhu.BLL.ReportService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="ReportDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+
+	<object name="UserLocateService" type="huhu.BLL.UserLocateService,huhu.BLL" singleton="false">
+		<property name="currentDal" ref="UserLocateDal"></property>
+		<property name="db" ref="DbSession"></property>
+	</object>
+	
+	
+</objects>

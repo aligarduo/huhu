@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>huhu.API</name>
+    </assembly>
+    <members>
+        <member name="T:huhu.API.Controllers.AdminControlArticleController">
+            <summary>
+            审核文章
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.AdminController">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.RankingController">
+            <summary>
+            作者排行榜
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.RichScanController">
+            <summary>
+            APP扫一扫登录
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.RichScanController.RichScan">
+            <summary>
+            获取二维码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.RichScanController.RichScan_Connect(System.String)">
+            <summary>
+            刷新状态
+            </summary>
+            <param name="uuid">UUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.RichScanController.RichScan_Syntony(System.String)">
+            <summary>
+            二维码扫码回调
+            </summary>
+            <param name="uuid">UUID</param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.SystemLogController">
+            <summary>
+            系统日志
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.AdminLoginController">
+            <summary>
+            管理员登录
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.AdminLoginController.Cipher(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            登录
+            </summary>
+            <param name="obj_list">前端数据集</param>
+            <returns>执行状态信息</returns>
+        </member>
+        <member name="M:huhu.API.Controllers.AdminLoginController.Token(System.String)">
+            <summary>
+            生成Token
+            </summary>
+            <param name="user_id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.AdminControlUserController">
+            <summary>
+            管理员控制面板
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.AdvertController">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.AdvertController.IntegratedData(System.Collections.Generic.List{huhu.Model.advert_all})">
+            <summary>
+            整合数据
+            </summary>
+            <param name="advert_list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.ArticleController">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.ArticleController.Rebuild_Objects(huhu.Model.article_all)">
+            <summary>
+            重构对象
+            </summary>
+            <param name="draft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.ArticleController.Synthetic_Data(huhu.Model.article_all,System.Int32,System.String)">
+            <summary>
+            整合数据
+            </summary>
+            <param name="article">文章列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.CollectController">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.CollectionController">
+            <summary>
+            收藏集
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.CollectionController.Add(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            新增
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.CollectionController.Delete(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            删除
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.CollectionController.List(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.CollectionController.Update(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            修改
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.FeedBackController">
+            <summary>
+            反馈建议
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.FeedBackController.Modify_Properties(huhu.Model.feedback_all)">
+            <summary>
+            修改属性
+            </summary>
+            <param name="feedback"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.FollowController">
+            <summary>
+            关注作者
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.ReplyController">
+            <summary>
+            回复评论
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.CommentController">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.DiggController">
+            <summary>
+            点赞
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.DraftController">
+            <summary>
+            文章草稿
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.DraftController.Rebuild_Objects(huhu.Model.article_draft)">
+            <summary>
+            重构对象
+            </summary>
+            <param name="draft"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.EmailCodeController">
+            <summary>
+            发送邮箱验证码
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.EmailCodeController.Create_Code(System.String)">
+            <summary>
+            创建验证码
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.EmailCodeController.Save_Code(System.String,System.String)">
+            <summary>
+            验证码保存至Redis
+            </summary>
+            <param name="mobile"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.EmailCodeController.Send_Email(System.String,System.String,System.Int32)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="email"></param>
+            <param name="random"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.ReportController">
+            <summary>
+            举报
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.ReportOptionController">
+            <summary>
+            举报问题选项
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.SearchController">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.SearchController.Search_Types(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            搜索类型 文章or话题
+            </summary>
+            <param name="obj_list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.SearchController.Filter_Type_Article(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+             搜索 文章
+            </summary>
+            <param name="obj_list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.SearchController.Filter_Type_Topic(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            搜索话题
+            </summary>
+            <param name="obj_list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.SearchController.Synthetic_Data(System.Collections.Generic.List{huhu.Model.article_all})">
+            <summary>
+            整合数据
+            </summary>
+            <param name="article_list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.SMSCodeController">
+            <summary>
+            发送手机登录验证码
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.SMSCodeController.Is_Phone(System.String)">
+            <summary>
+            校验手机号码
+            </summary>
+            <param name="mobile"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:huhu.API.Controllers.SMSCodeController.Create_Code(System.String,System.String,System.String)">
+            <summary>
+            创建验证码并保存至Redis和下发客户端
+            </summary>
+            <param name="area_code">国际区号</param>
+            <param name="mobile">接收短信的手机号</param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.SMSCodeController.Save_Code(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            验证码保存至Redis
+            </summary>
+            <param name="mobile">接收短信的手机号</param>
+            <param name="random">随机验证码</param>
+            <param name="expires">验证码有效时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.RecommendController">
+            <summary>
+            推荐文章
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.RecommendController.Synthetic_Data(System.Collections.Generic.List{huhu.Model.article_all},System.String)">
+            <summary>
+            整合数据
+            </summary>
+            <param name="article_list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.TagsController">
+            <summary>
+            文章标签
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.ThirdPartyLoginController.DataAssignment(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            数据赋值
+            </summary>
+            <param name="user_id">用户id</param>
+            <param name="user_name">用户名</param>
+            <param name="phone">手机号</param>
+            <param name="avatar_large">用户头像</param>
+            <param name="password">登录密码</param>
+            <param name="email">邮箱地址</param>
+            <param name="qq_openid">QQ官方唯一标识</param>
+            <param name="qq_nickname">QQ昵称</param>
+            <param name="qq_figureurl">QQ头像</param>
+            <param name="wechat_nickname">微信名</param>
+            <param name="weibo_nickname">微博名</param>
+            <param name="level">用户等级</param>
+            <param name="job_title">用户个性签名</param>
+            <param name="place">所在地区</param>
+            <param name="status">账号状态</param>
+            <returns>user_all</returns>
+        </member>
+        <member name="M:huhu.API.Controllers.ThirdPartyLoginController.Token(System.String)">
+            <summary>
+            生成Token
+            </summary>
+            <param name="user_id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.TopicCircleController">
+            <summary>
+            话题圈子
+            </summary>
+        </member>
+        <member name="T:huhu.API.Controllers.TopicController">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.TopicController.Modify_Properties(huhu.Model.topic_all)">
+            <summary>
+            修改返回体属性
+            </summary>
+            <param name="topic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.TopicController.SortType(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询拓展
+            </summary>
+            <param name="obj_list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.TosController">
+            <summary>
+            图片处理
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.MainFileServer">
+            <summary>
+            主域名
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.BackupFileServer">
+            <summary>
+            备用域名
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.DiskStoragePath">
+            <summary>
+            存放路径
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.UserPicSize">
+            <summary>
+            头像图片尺寸
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.UserPicFolderPath">
+            <summary>
+            头像图片存放文件夹路径
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.OriginalSize">
+            <summary>
+            原图图片尺寸
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.OriginalFolderPath">
+            <summary>
+            原图图片存放文件夹路径
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.CoverSize">
+            <summary>
+            封面图片尺寸
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.CoverFolderPath">
+            <summary>
+            封面图片存放文件夹路径
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.TosController.WaterMarkFontColor">
+            <summary>
+            文字水印字体颜色
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.TosController.ProcessData(System.String,System.String,System.Boolean)">
+            <summary>
+            开始处理数据
+            </summary>
+            <param name="PicSize"></param>
+            <param name="FolderPath"></param>
+            <param name="WaterMark"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.UserLoginController">
+            <summary>
+            用户登录
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.UserLoginController.DiskStoragePath">
+            <summary>
+            磁盘存储文件路径
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.UserLoginController.UserDefaultAvatar">
+            <summary>
+            用户默认头像存放文件夹
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.SMS(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            手机登录
+            </summary>
+            <param name="obj_list">前端数据集</param>
+            <returns>执行状态信息</returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.Cipher(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            密码登录
+            </summary>
+            <param name="obj_list">前端数据集</param>
+            <returns>执行状态信息</returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.Reset(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            重置密码
+            </summary>
+            <param name="obj_list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.Is_Phone(System.String)">
+            <summary>
+            校验手机号码
+            </summary>
+            <param name="mobile"></param>
+            <returns>校验成功则返回区号，否则返回"false"</returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.Is_UserStatus(huhu.Model.user_all)">
+            <summary>
+            校验账号状态
+            </summary>
+            <param name="user_info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.RecordingUnit(System.String)">
+            <summary>
+            记录登录设备
+            </summary>
+            <param name="user_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.Token(System.String)">
+            <summary>
+            生成Token
+            </summary>
+            <param name="user_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Controllers.UserLoginController.Logout(System.String)">
+            <summary>
+            账号注销登录
+            </summary>
+            <param name="token_setId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:huhu.API.Controllers.UserController">
+            <summary>
+            用户个人信息
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.UserController.MainFileServer">
+            <summary>
+            主文件服务器
+            </summary>
+        </member>
+        <member name="F:huhu.API.Controllers.UserController.UserDefaultAvatar">
+            <summary>
+            用户默认头像存放文件夹
+            </summary>
+        </member>
+        <member name="M:huhu.API.Controllers.UserController.MaskingSpecialData(huhu.Model.user_all)">
+            <summary>
+            屏蔽特殊数据
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:huhu.API.Filters.ErrorLogFilter.GetCollections(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取Action参数
+            </summary>
+            <param name="Collections"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

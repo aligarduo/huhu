@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+	<object type="huhu.API.Controllers.ArticleController,huhu.API" singleton="false">
+		<property name="ArticleDraftBLL" ref="ArticleDraftService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="ArticleTagBLL" ref="ArticleTagService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="ArticleViewBLL" ref="ArticleViewService"></property>
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="UserCollectBLL" ref="UserCollectService"></property>
+		<property name="FollowBLL" ref="FollowService"></property>
+		<property name="ArticleCommentBLL" ref="ArticleCommentService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.TagsController,huhu.API" singleton="false">
+		<property name="ArticleTagBLL" ref="ArticleTagService"></property>
+	</object>
+	
+	<object type="huhu.API.Controllers.UserLoginController,huhu.API" singleton="false">
+		<property name="AreaCodeBLL" ref="AreaCodeService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="UserLocateBLL" ref="UserLocateService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.SMSCodeController,huhu.API" singleton="false">
+		<property name="AreaCodeBLL" ref="AreaCodeService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.RecommendController,huhu.API" singleton="false">
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="ArticleTagBLL" ref="ArticleTagService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="ArticleViewBLL" ref="ArticleViewService"></property>
+		<property name="ArticleCommentBLL" ref="ArticleCommentService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.AdvertController,huhu.API" singleton="false">
+		<property name="AdvertBLL" ref="AdvertService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.UserController,huhu.API" singleton="false">
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="ArticleViewBLL" ref="ArticleViewService"></property>
+		<property name="FollowBLL" ref="FollowService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.DraftController,huhu.API" singleton="false">
+		<property name="ArticleDraftBLL" ref="ArticleDraftService"></property>
+		<property name="ArticleTagBLL" ref="ArticleTagService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.DiggController,huhu.API" singleton="false">
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="ArticleReplyBLL" ref="ArticleReplyService"></property>
+		<property name="ArticleCommentBLL" ref="ArticleCommentService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.CommentController,huhu.API" singleton="false">
+		<property name="ArticleCommentBLL" ref="ArticleCommentService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="ArticleReplyBLL" ref="ArticleReplyService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.ReplyController,huhu.API" singleton="false">
+		<property name="ArticleReplyBLL" ref="ArticleReplyService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="ArticleCommentBLL" ref="ArticleCommentService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.FollowController,huhu.API" singleton="false">
+		<property name="FollowBLL" ref="FollowService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.CollectionController,huhu.API" singleton="false">
+		<property name="UserCollectBLL" ref="UserCollectService"></property>
+		<property name="UserCollectionBLL" ref="UserCollectionService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.CollectController,huhu.API" singleton="false">
+		<property name="UserCollectBLL" ref="UserCollectService"></property>
+		<property name="UserCollectionBLL" ref="UserCollectionService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.FeedBackController,huhu.API" singleton="false">
+		<property name="FeedBackBLL" ref="FeedBackService"></property>
+	</object>
+	
+	<object type="huhu.API.Controllers.AdminController,huhu.API" singleton="false">
+		<property name="AdminBLL" ref="AdminService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.AdminLoginController,huhu.API" singleton="false">
+		<property name="AdminBLL" ref="AdminService"></property>
+		<property name="AdminManagerBLL" ref="AdminManagerService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.SearchController,huhu.API" singleton="false">
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="ArticleTagBLL" ref="ArticleTagService"></property>
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="ArticleViewBLL" ref="ArticleViewService"></property>
+		<property name="ArticleCommentBLL" ref="ArticleCommentService"></property>
+		<property name="TopicBLL" ref="TopicService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.TopicController,huhu.API" singleton="false">
+		<property name="TopicBLL" ref="TopicService"></property>
+		<property name="TopicCircleBLL" ref="TopicCircleService"></property>
+	</object>
+	
+	<object type="huhu.API.Controllers.TopicCircleController,huhu.API" singleton="false">
+		<property name="TopicCircleBLL" ref="TopicCircleService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.ReportOptionController,huhu.API" singleton="false">
+		<property name="ReportOptionBLL" ref="ReportOptionService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.ReportController,huhu.API" singleton="false">
+		<property name="ReportBLL" ref="ReportService"></property>
+		<property name="ReportOptionBLL" ref="ReportOptionService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.AdminControlUserController,huhu.API" singleton="false">
+		<property name="UserBLL" ref="UserService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.AdminControlArticleController,huhu.API" singleton="false">
+		<property name="ArticleBLL" ref="ArticleService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.RankingController,huhu.API" singleton="false">
+		<property name="UserBLL" ref="UserService"></property>
+		<property name="ArticleBLL" ref="ArticleService"></property>
+		<property name="DiggBLL" ref="DiggService"></property>
+		<property name="ArticleViewBLL" ref="ArticleViewService"></property>
+	</object>
+
+	<object type="huhu.API.Controllers.ThirdPartyLoginController,huhu.API" singleton="false">
+		<property name="UserBLL" ref="UserService"></property>
+	</object>
+
+
+
+</objects>

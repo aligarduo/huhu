@@ -1,0 +1,33 @@
+.sidebar-block.more-feature {
+	display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.sidebar-block.more-feature .feature-stat {
+    align-items: center;
+    display: block;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebar-block.more-feature .stat-icon {
+    margin: auto;
+    text-align: center;
+    height: 32px
+}
+
+.sidebar-block.more-feature .stat-icon svg {
+    width: 26px;
+    transition: all .25s;
+}
+
+.sidebar-block.more-feature .feature-stat:hover svg {
+    width: 28px;
+}
+
+.sidebar-block.more-feature .stat-hint {
+    font-size: 14px;
+    margin-top: .1rem;
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="huhulogModelStoreContainer" CdmEntityContainer="huhuLogEntities">
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="huhu.logModel.log">
+        <MappingFragment StoreEntitySet="log">
+          <ScalarProperty Name="attack_time" ColumnName="attack_time" />
+          <ScalarProperty Name="exception" ColumnName="exception" />
+          <ScalarProperty Name="http_method" ColumnName="http_method" />
+          <ScalarProperty Name="client_type" ColumnName="client_type" />
+          <ScalarProperty Name="client_ip" ColumnName="client_ip" />
+          <ScalarProperty Name="http_header" ColumnName="http_header" />
+          <ScalarProperty Name="action_param" ColumnName="action_param" />
+          <ScalarProperty Name="action_name" ColumnName="action_name" />
+          <ScalarProperty Name="controller_name" ColumnName="controller_name" />
+          <ScalarProperty Name="log_id" ColumnName="log_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

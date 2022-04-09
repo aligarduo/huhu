@@ -1,0 +1,144 @@
+
+.info-box-home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+}
+
+@media (max-width:600px) {
+	.info-box-home {
+		align-items: center
+	}
+
+	.info-box-home .intro,
+	.info-box-home .position {
+		text-align: center
+	}
+
+	.info-box-home .intro .icon,
+	.info-box-home .position .icon {
+		display: none
+	}
+}
+
+.info-box-home .top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem
+}
+
+.info-box-home .top .username {
+	margin: 0;
+	padding: 0;
+	font-size: 2.167rem;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #000
+}
+
+.info-box-home .top .username .rank{
+	display: inline-block;
+	margin-left: 0.63rem;
+}
+
+@media (max-width:700px) {
+	.info-box-home .top .username {
+		font-size: 1.5rem;
+		font-weight: 500
+	}
+}
+
+.info-box-home .top .link {
+	display: block;
+	width: 100px;
+	height: 24px;
+	margin-left: 1rem;
+	border-radius: 1rem;
+	background-image: url(//lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/21f409eca2c1ef1e267131028760ad10.svg);
+	background-size: 100% 100%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-color: transparent
+}
+
+.info-box-home .top .link:hover {
+	opacity: .8
+}
+
+.info-box-home .intro,
+.info-box-home .position {
+	font-size: 1.25rem;
+	line-height: 1.5;
+	color: #72777b;
+	overflow: hidden
+}
+
+.info-box-home .intro .icon,
+.info-box-home .position .icon {
+	flex: 0 0 auto;
+	margin-right: .6rem;
+	height: 1.8rem
+}
+
+.info-box-home .intro .content,
+.info-box-home .position .content {
+	flex: 1 1 auto;
+	vertical-align: top;
+	font-size: 1.17rem
+}
+
+.info-box-home .intro .content .divider,
+.info-box-home .position .content .divider {
+	display: inline-block;
+	padding: 0 5px
+}
+
+.info-box-home .intro .content span,
+.info-box-home .position .content span {
+	display: inline-block;
+	max-width: 160px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+@media (max-width:700px) {
+
+	.info-box-home .intro .content,
+	.info-box-home .position .content {
+		font-size: 1.17rem;
+		opacity: .7;
+		color: #30445a
+	}
+}
+
+.info-box-home .intro .info-input,
+.info-box-home .position .info-input {
+	color: #4a68ad;
+	cursor: pointer
+}
+
+.info-box-home .intro .info-input:hover,
+.info-box-home .position .info-input:hover {
+	opacity: .8
+}
+
+.info-box-home .intro .info-input:before,
+.info-box-home .position .info-input:before {
+	content: "+ "
+}
+
+.info-box-home .intro {
+	margin-top: .4rem
+}
+
+.info-box-home .rank img {
+	vertical-align: inherit
+}
+
+@media (max-width:700px) {
+	.info-box-home .rank img {
+		vertical-align: baseline;
+		vertical-align: initial
+	}
+}

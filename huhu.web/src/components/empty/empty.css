@@ -1,0 +1,32 @@
+.activity-empty {
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 0 0 .2rem .2rem;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: 400;
+	color: #b2bac2;
+}
+
+.activity-empty .empty-text {
+	margin-top: 10px
+}
+
+.activity-empty .login-button {
+	margin-top: 14px;
+	font-size: 1.166rem;
+	color: #027fff;
+	width: 6.666rem;
+	height: 2.833rem;
+	background: transparent;
+	border-radius: 2px;
+	border: 1px solid #027fff
+}
+
+.empty-icon{
+	width: 48px;
+}

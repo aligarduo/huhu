@@ -1,0 +1,99 @@
+body.privacy{
+	background: #fff;
+}
+
+.css-ovbogu {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-size: 15px;
+}
+
+.css-1d7fvuu {
+    box-sizing: border-box;
+    min-width: 0px;
+    color: rgb(18, 18, 18);
+    margin: auto;
+    padding: 40px 16px 80px;
+    max-width: 640px;
+}
+
+.ztext {
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+.ztext>:first-child {
+    margin-top: 0;
+}
+
+.ztext h1, .ztext h2 {
+    clear: left;
+    margin-top: 2.33333em;
+    margin-bottom: 1.16667em;
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-weight: 600;
+    font-synthesis: style;
+}
+
+.ztext p {
+    margin: 1.4em 0;
+}
+
+.ztext ol {
+    display: table;
+    counter-reset: ol;
+}
+
+.ztext ol, .ztext ul {
+    margin: 1.4em 0;
+    padding: 0;
+}
+
+.ztext ol>li {
+    display: table-row;
+    list-style: none;
+}
+
+.ztext ol>li:before {
+    display: table-cell;
+    text-align: right;
+    counter-increment: ol;
+    content: counter(ol) ". ";
+    white-space: pre;
+}
+
+.css-1d7fvuu a {
+    text-decoration: underline;
+}
+
+.ztext ol ol {
+    counter-reset: ol2;
+}
+
+.ztext ol ol, .ztext ol ul, .ztext ul ol, .ztext ul ul {
+    margin: 0;
+}
+
+.ztext ol {
+    display: table;
+    counter-reset: ol;
+}
+
+.ztext ol, .ztext ul {
+    margin: 1.4em 0;
+    padding: 0;
+}
+
+ol, ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+

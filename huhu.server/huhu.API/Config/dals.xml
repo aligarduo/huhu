@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+	<object name="DbSession" type="huhu.DalFactory.DbSessionFactory,huhu.DalFactory" singleton="false" factory-method="GetDbSession">
+		<property name="ArticleDal" ref="ArticleDal"></property>
+		<property name="ArticleTagDal" ref="ArticleTagDal"></property>
+		<property name="UserDal" ref="UserDal"></property>
+		<property name="AreaCodeDal" ref="AreaCodeDal"></property>
+		<property name="AdvertDal" ref="AdvertDal"></property>
+		<property name="ArticleDraftDal" ref="ArticleDraftDal"></property>
+		<property name="DiggDal" ref="DiggDal"></property>
+		<property name="ArticleViewDal" ref="ArticleViewDal"></property>
+		<property name="ArticleCommentDal" ref="ArticleCommentDal"></property>
+		<property name="ArticleReplyDal" ref="ArticleReplyDal"></property>
+		<property name="FollowDal" ref="FollowDal"></property>
+		<property name="UserCollectionDal" ref="UserCollectionDal"></property>
+		<property name="UserCollectDal" ref="UserCollectDal"></property>
+		<property name="FeedBackDal" ref="FeedBackDal"></property>
+		<property name="AdminDal" ref="AdminDal"></property>
+		<property name="AdminManagerDal" ref="AdminManagerDal"></property>
+		<property name="TopicDal" ref="TopicDal"></property>
+		<property name="TopicCircleDal" ref="TopicCircleDal"></property>
+		<property name="ReportOptionDal" ref="ReportOptionDal"></property>
+		<property name="ReportDal" ref="ReportDal"></property>
+		<property name="UserLocateDal" ref="UserLocateDal"></property>
+	</object>
+
+	<object name="ArticleDal" type="huhu.DAL.ArticleDal,huhu.DAL" single="false"></object>
+	<object name="ArticleTagDal" type="huhu.DAL.ArticleTagDal,huhu.DAL" single="false"></object>
+	<object name="UserDal" type="huhu.DAL.UserDal,huhu.DAL" single="false"></object>
+	<object name="AreaCodeDal" type="huhu.DAL.AreaCodeDal,huhu.DAL" single="false"></object>
+	<object name="AdvertDal" type="huhu.DAL.AdvertDal,huhu.DAL" single="false"></object>
+	<object name="ArticleDraftDal" type="huhu.DAL.ArticleDraftDal,huhu.DAL" single="false"></object>
+	<object name="DiggDal" type="huhu.DAL.DiggDal,huhu.DAL" single="false"></object>
+	<object name="ArticleViewDal" type="huhu.DAL.ArticleViewDal,huhu.DAL" single="false"></object>
+	<object name="ArticleCommentDal" type="huhu.DAL.ArticleCommentDal,huhu.DAL" single="false"></object>
+	<object name="ArticleReplyDal" type="huhu.DAL.ArticleReplyDal,huhu.DAL" single="false"></object>
+	<object name="FollowDal" type="huhu.DAL.FollowDal,huhu.DAL" single="false"></object>
+	<object name="UserCollectionDal" type="huhu.DAL.UserCollectionDal,huhu.DAL" single="false"></object>
+	<object name="UserCollectDal" type="huhu.DAL.UserCollectDal,huhu.DAL" single="false"></object>
+	<object name="FeedBackDal" type="huhu.DAL.FeedBackDal,huhu.DAL" single="false"></object>
+	<object name="AdminDal" type="huhu.DAL.AdminDal,huhu.DAL" single="false"></object>
+	<object name="AdminManagerDal" type="huhu.DAL.AdminManagerDal,huhu.DAL" single="false"></object>
+	<object name="TopicDal" type="huhu.DAL.TopicDal,huhu.DAL" single="false"></object>
+	<object name="TopicCircleDal" type="huhu.DAL.TopicCircleDal,huhu.DAL" single="false"></object>
+	<object name="ReportOptionDal" type="huhu.DAL.ReportOptionDal,huhu.DAL" single="false"></object>
+	<object name="ReportDal" type="huhu.DAL.ReportDal,huhu.DAL" single="false"></object>
+	<object name="UserLocateDal" type="huhu.DAL.UserLocateDal,huhu.DAL" single="false"></object>
+
+
+</objects>

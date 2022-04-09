@@ -1,0 +1,390 @@
+.draft-navigator {
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.draft-toggle-btn {
+	width: 2.667rem;
+	height: 2.667rem;
+	border-radius: 50%;
+	background-color: #eee;
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: pointer
+}
+
+.draft-toggle-btn:hover {
+	opacity: .8
+}
+
+.draft-menu {
+	position: absolute;
+	min-width: 9.6rem;
+	font-size: 1.25rem;
+	color: #909090;
+	white-space: nowrap;
+	background-color: #fff;
+	border: 1px solid rgba(177, 180, 185, .45);
+	border-radius: 8px;
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1)
+}
+
+.draft-menu.root-menu {
+	margin-top: 1.3rem;
+	top: 100%;
+	right: -1.4rem;
+	z-index: 20
+}
+
+.draft-menu.sub-menu {
+	top: 0;
+	right: 100%;
+	margin-right: .3rem;
+	cursor: default;
+	display: none
+}
+
+.draft-menu.sub-menu:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 100%;
+	bottom: 0;
+	width: .4rem
+}
+
+.draft-menu .item-group {
+	padding: .8rem .2rem
+}
+
+.draft-menu .item-group:not(:last-child) {
+	border-bottom: 1px solid rgba(0, 0, 0, .04)
+}
+
+.draft-menu .item-group .item-g {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+	position: relative;
+	padding: .62rem 1rem;
+	color: inherit;
+	text-decoration: none;
+	border-radius: 6px;
+	color: #121212;
+	cursor: pointer
+}
+
+.draft-menu .item-group .item-g:hover {
+	background-color: hsla(0, 0%, 94.9%, .5)
+}
+
+.draft-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0 1.4rem;
+	height: 5.334rem;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgb(116 116 116 / 8%);
+	background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: saturate(5) blur(20px);
+    backdrop-filter: saturate(5) blur(20px);
+    border-bottom: 1px solid #eef2f8;
+	z-index: 100
+}
+
+.draft-header-content {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 83.334rem;
+	max-width: 100%;
+	height: 100%
+}
+
+.draft-logo {
+	position: relative;
+	margin: 0 auto 0 0;
+	width: 2.8rem;
+	height: 2.8rem;
+	background: 50% no-repeat;
+	background-size: contain;
+	background-image: url('../../assets/images/logo/logo_icon_mobile.svg')
+}
+
+.draft-new-button {
+	margin-right: 2.2rem;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 1.25rem;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: #06f;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.draft-new-button:hover {
+	background-color: #007fff;
+}
+
+.draft-item .draft {
+	padding: 2rem 1rem
+}
+
+.draft-item .draft-title {
+	font-size: 1.334rem;
+	font-weight: 700;
+	line-height: 2;
+	text-decoration: none;
+	color: #333
+}
+
+.draft-item .draft-title:hover {
+	color: #007fff
+}
+
+.draft-info-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: .3rem 0;
+	font-size: 1.2rem;
+	color: #909090;
+	cursor: default
+}
+
+.draft-list{
+	padding: .16rem 1rem;
+	background-color: #fff;
+	border-radius: 12px;
+}
+
+.draft-list-header {
+	padding: 1rem;
+	font-size: 1.2rem;
+	line-height: 2;
+	color: #333;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.draft-list-header .list-header-item.active {
+	font-weight: 700;
+	color: #007fff
+}
+
+.draft-main {
+	position: relative;
+	margin-top: 5.334rem;
+	padding: 2rem 0 4rem 0
+}
+
+.draft-list {
+	margin: 0 auto;
+	width: 58rem;
+	max-width: 100%
+}
+
+.item-date {
+	margin-right: 2rem;
+}
+
+.menus {
+	position: relative;
+	font-size: 2rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.ion-ios-more:before {
+	content: "...";
+}
+
+.menus .menu-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin: 0;
+	padding: 0.5rem 0;
+	font-size: 1rem;
+	white-space: nowrap;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid #e8e8e8;
+	list-style: none;
+}
+
+.menus .menu-list .draft-item {
+	padding: 0.86rem 2rem;
+	margin: 0 2px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 1px solid #fff;
+}
+
+.menus .menu-list .draft-item:hover {
+	color: #06f;
+}
+
+.confirm-dialog-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(29,33,41,.2);
+    z-index: 1000;
+}
+
+.confirm-dialog {
+    position: relative;
+    padding: 2rem;
+    width: 38rem;
+    max-width: 100%;
+    background-color: #fff;
+    border: 1px solid rgba(178,181,186,.78);
+    border-radius: 12px;
+}
+
+.dialog-header {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dialog-header .dialog-title {
+    font-size: 1.417rem;
+    font-weight: 600;
+    color: #000;
+    cursor: default;
+}
+
+.dialog-header .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #979797;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.ion-close-round:before {
+    content: "\f129";
+}
+
+.dialog-body {
+    padding: 1rem 0 1.5rem 0;
+    font-size: 1.167rem;
+    line-height: 1.7;
+    color: #333;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.dialog-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dialog-footer .ctrl-btn {
+	position: relative;
+    padding: 0.6rem 1.6rem;
+    font-size: 1.167rem;
+    color: #666;
+	font-weight: 700;
+	letter-spacing: 1px;
+    background-color: #fff;
+    border-radius: 3px;
+	border: 1px solid transparent;
+	transition: all .2s;
+    outline: none;
+    cursor: pointer;
+}
+
+.dialog-footer .ctrl-btn.cancel-btn:hover{
+	color: #fff;
+	background: #666;
+}
+
+.dialog-footer .ctrl-btn.confirm-btn:hover {
+	color: #fff;
+	background: #06f;
+}
+
+.dialog-footer .confirm-btn {
+    color: rgb(0 111 255 / 92%);
+}
+
+@media (max-width: 700px){
+	.draft-new-button{
+		font-size: 16px;
+		font-weight: 700;
+		color: #06f;
+		margin-right: 1.0rem;
+		background-color: transparent;
+	}
+	.draft-new-button:hover {
+		color: #007fff;
+		background-color: transparent;
+	}
+	.draft-menu.root-menu{
+		margin-right: .45rem;
+	}
+}
+
+@media (max-width: 580px){
+	.confirm-dialog{
+		width: 90%;
+		min-width: 330px;
+	}
+}

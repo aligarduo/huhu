@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="huhu.logModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="log_id" />
+    </Key>
+    <Property Name="log_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="controller_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="action_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="action_param" Type="text" Nullable="false" />
+    <Property Name="http_header" Type="text" Nullable="false" />
+    <Property Name="client_ip" Type="text" Nullable="false" />
+    <Property Name="client_type" Type="text" Nullable="false" />
+    <Property Name="http_method" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="exception" Type="text" Nullable="false" />
+    <Property Name="attack_time" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="huhulogModelStoreContainer">
+    <EntitySet Name="log" EntityType="Self.log" Schema="huhu.log" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

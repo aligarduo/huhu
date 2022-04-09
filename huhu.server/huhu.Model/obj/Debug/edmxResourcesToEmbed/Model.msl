@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="huhuModelStoreContainer" CdmEntityContainer="huhuEntities">
+    <EntitySetMapping Name="admin_all">
+      <EntityTypeMapping TypeName="huhuModel.admin_all">
+        <MappingFragment StoreEntitySet="admin_all">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="power" ColumnName="power" />
+          <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+          <ScalarProperty Name="update_time" ColumnName="update_time" />
+          <ScalarProperty Name="register_time" ColumnName="register_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admin_manager">
+      <EntityTypeMapping TypeName="huhuModel.admin_manager">
+        <MappingFragment StoreEntitySet="admin_manager">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="advert_all">
+      <EntityTypeMapping TypeName="huhuModel.advert_all">
+        <MappingFragment StoreEntitySet="advert_all">
+          <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="brief" ColumnName="brief" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="advert_type" ColumnName="advert_type" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="area_code_all">
+      <EntityTypeMapping TypeName="huhuModel.area_code_all">
+        <MappingFragment StoreEntitySet="area_code_all">
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="area_name" ColumnName="area_name" />
+          <ScalarProperty Name="area_short_name" ColumnName="area_short_name" />
+          <ScalarProperty Name="area_code" ColumnName="area_code" />
+          <ScalarProperty Name="regulation" ColumnName="regulation" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_comment">
+      <EntityTypeMapping TypeName="huhuModel.article_comment">
+        <MappingFragment StoreEntitySet="article_comment">
+          <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="comment_content" ColumnName="comment_content" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_draft">
+      <EntityTypeMapping TypeName="huhuModel.article_draft">
+        <MappingFragment StoreEntitySet="article_draft">
+          <ScalarProperty Name="draft_id" ColumnName="draft_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="brief_content" ColumnName="brief_content" />
+          <ScalarProperty Name="mark_content" ColumnName="mark_content" />
+          <ScalarProperty Name="cover_image" ColumnName="cover_image" />
+          <ScalarProperty Name="tag_ids" ColumnName="tag_ids" />
+          <ScalarProperty Name="edit_type" ColumnName="edit_type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_reply">
+      <EntityTypeMapping TypeName="huhuModel.article_reply">
+        <MappingFragment StoreEntitySet="article_reply">
+          <ScalarProperty Name="reply_id" ColumnName="reply_id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="reply_comment_id" ColumnName="reply_comment_id" />
+          <ScalarProperty Name="reply_content" ColumnName="reply_content" />
+          <ScalarProperty Name="reply_to_reply_id" ColumnName="reply_to_reply_id" />
+          <ScalarProperty Name="reply_to_user_id" ColumnName="reply_to_user_id" />
+          <ScalarProperty Name="reply_type" ColumnName="reply_type" />
+          <ScalarProperty Name="reply_status" ColumnName="reply_status" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_view">
+      <EntityTypeMapping TypeName="huhuModel.article_view">
+        <MappingFragment StoreEntitySet="article_view">
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="view_count" ColumnName="view_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedback_all">
+      <EntityTypeMapping TypeName="huhuModel.feedback_all">
+        <MappingFragment StoreEntitySet="feedback_all">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="pic_list" ColumnName="pic_list" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notify_all">
+      <EntityTypeMapping TypeName="huhuModel.notify_all">
+        <MappingFragment StoreEntitySet="notify_all">
+          <ScalarProperty Name="notify_id" ColumnName="notify_id" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="notify_type" ColumnName="notify_type" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="report_all">
+      <EntityTypeMapping TypeName="huhuModel.report_all">
+        <MappingFragment StoreEntitySet="report_all">
+          <ScalarProperty Name="report_id" ColumnName="report_id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="issue" ColumnName="issue" />
+          <ScalarProperty Name="prove_pic" ColumnName="prove_pic" />
+          <ScalarProperty Name="describe" ColumnName="describe" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="report_option">
+      <EntityTypeMapping TypeName="huhuModel.report_option">
+        <MappingFragment StoreEntitySet="report_option">
+          <ScalarProperty Name="option_id" ColumnName="option_id" />
+          <ScalarProperty Name="option_name" ColumnName="option_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="topic_all">
+      <EntityTypeMapping TypeName="huhuModel.topic_all">
+        <MappingFragment StoreEntitySet="topic_all">
+          <ScalarProperty Name="topic_id" ColumnName="topic_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="topic_circle_id" ColumnName="topic_circle_id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="pic_list" ColumnName="pic_list" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="topic_circle">
+      <EntityTypeMapping TypeName="huhuModel.topic_circle">
+        <MappingFragment StoreEntitySet="topic_circle">
+          <ScalarProperty Name="circle_id" ColumnName="circle_id" />
+          <ScalarProperty Name="circle_name" ColumnName="circle_name" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_collect">
+      <EntityTypeMapping TypeName="huhuModel.user_collect">
+        <MappingFragment StoreEntitySet="user_collect">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="collection_id" ColumnName="collection_id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_collection">
+      <EntityTypeMapping TypeName="huhuModel.user_collection">
+        <MappingFragment StoreEntitySet="user_collection">
+          <ScalarProperty Name="collection_id" ColumnName="collection_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="collection_name" ColumnName="collection_name" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_digg">
+      <EntityTypeMapping TypeName="huhuModel.user_digg">
+        <MappingFragment StoreEntitySet="user_digg">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="digg_id" ColumnName="digg_id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_follow">
+      <EntityTypeMapping TypeName="huhuModel.user_follow">
+        <MappingFragment StoreEntitySet="user_follow">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="follow_id" ColumnName="follow_id" />
+          <ScalarProperty Name="follow_type" ColumnName="follow_type" />
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_locate">
+      <EntityTypeMapping TypeName="huhuModel.user_locate">
+        <MappingFragment StoreEntitySet="user_locate">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="place" ColumnName="place" />
+          <ScalarProperty Name="mac" ColumnName="mac" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_all">
+      <EntityTypeMapping TypeName="huhuModel.article_all">
+        <MappingFragment StoreEntitySet="article_all">
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+          <ScalarProperty Name="edit_type" ColumnName="edit_type" />
+          <ScalarProperty Name="tag_ids" ColumnName="tag_ids" />
+          <ScalarProperty Name="mark_content" ColumnName="mark_content" />
+          <ScalarProperty Name="brief_content" ColumnName="brief_content" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="cover_image" ColumnName="cover_image" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_tag">
+      <EntityTypeMapping TypeName="huhuModel.article_tag">
+        <MappingFragment StoreEntitySet="article_tag">
+          <ScalarProperty Name="ctime" ColumnName="ctime" />
+          <ScalarProperty Name="mtime" ColumnName="mtime" />
+          <ScalarProperty Name="back_ground" ColumnName="back_ground" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_all">
+      <EntityTypeMapping TypeName="huhuModel.user_all">
+        <MappingFragment StoreEntitySet="user_all">
+          <ScalarProperty Name="register_time" ColumnName="register_time" />
+          <ScalarProperty Name="update_time" ColumnName="update_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="place" ColumnName="place" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="job_title" ColumnName="job_title" />
+          <ScalarProperty Name="weibo_verified" ColumnName="weibo_verified" />
+          <ScalarProperty Name="weibo_nickname" ColumnName="weibo_nickname" />
+          <ScalarProperty Name="wechat_verified" ColumnName="wechat_verified" />
+          <ScalarProperty Name="wechat_nickname" ColumnName="wechat_nickname" />
+          <ScalarProperty Name="qq_verified" ColumnName="qq_verified" />
+          <ScalarProperty Name="qq_figureurl" ColumnName="qq_figureurl" />
+          <ScalarProperty Name="qq_nickname" ColumnName="qq_nickname" />
+          <ScalarProperty Name="qq_openid" ColumnName="qq_openid" />
+          <ScalarProperty Name="email_verified" ColumnName="email_verified" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone_verified" ColumnName="phone_verified" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="avatar_large" ColumnName="avatar_large" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

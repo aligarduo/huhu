@@ -1,0 +1,40 @@
+.about {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 920px;
+}
+
+.about .cover{
+    position: relative;
+    margin-right: 118px;
+}
+
+.about .describe {
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 36px 0;
+}
+
+@media (max-width:960px) {
+	.about {
+        display: inline-block;
+        margin-top: 26px;
+        width: 100%;
+    }
+    .about .cover {
+        margin: auto;
+        text-align: center;
+    }
+    .about .cover img {
+        width: 200px;
+        height: 200px;
+    }
+    .about .describe {
+        width: 100%;
+        padding: 10px 42px;
+        margin-top: 26px;
+    }
+}

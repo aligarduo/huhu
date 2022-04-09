@@ -1,0 +1,87 @@
+@-webkit-keyframes xitu-skeleton-animation-data-v-4892f418 {
+	0% {
+		background-position: 0 0
+	}
+
+	to {
+		background-position: 480px 0
+	}
+}
+
+@keyframes xitu-skeleton-animation-data-v-4892f418 {
+	0% {
+		background-position: 0 0
+	}
+
+	to {
+		background-position: 480px 0
+	}
+}
+
+.xitu-skeleton-animated .xitu-skeleton-avatar,
+.xitu-skeleton-animated .xitu-skeleton-line {
+	border-radius: 2px;
+	background: linear-gradient(90deg, #fff, #edeff1, #fff);
+	background-size: 480px 480px;
+	-webkit-animation: xitu-skeleton-animation-data-v-4892f418 .6s linear infinite;
+	animation: xitu-skeleton-animation-data-v-4892f418 .6s linear infinite
+}
+
+.xitu-skeleton {
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.xitu-skeleton-avatar {
+	float: left;
+	margin-right: 12px;
+	background-color: #f3f3f3;
+	display: block
+}
+
+.xitu-skeleton-avatar-circle {
+	border-radius: 50%
+}
+
+.xitu-skeleton-avatar-square {
+	border-radius: 15%
+}
+
+.xitu-skeleton-item {
+	padding-bottom: 21px;
+	margin-bottom: 21px;
+	border-bottom: 1px solid #f3f3f3
+}
+
+.xitu-skeleton-item:last-child {
+	padding: 0;
+	margin: 0;
+	border: none
+}
+
+.xitu-skeleton-content {
+	padding: 20px
+}
+
+.xitu-skeleton-line {
+	width: 100%;
+	margin-bottom: 16px;
+	height: 14px;
+	background: #f3f3f3
+}
+
+.xitu-skeleton-line:first-child {
+	width: 40%;
+	margin-top: 8px
+}
+
+.xitu-skeleton-line:nth-child(3) {
+	width: 80%
+}
+
+.xitu-skeleton-line:last-child {
+	width: 60%;
+	margin-bottom: 0
+}

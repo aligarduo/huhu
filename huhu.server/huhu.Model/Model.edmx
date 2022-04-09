@@ -1,0 +1,921 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="huhuModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin_all">
+          <Key>
+            <PropertyRef Name="admin_id" />
+          </Key>
+          <Property Name="admin_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="power" Type="int" Nullable="false" />
+          <Property Name="audit_status" Type="int" Nullable="false" />
+          <Property Name="update_time" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="register_time" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="admin_manager">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="admin_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="ip" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="location" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="time" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="advert_all">
+          <Key>
+            <PropertyRef Name="advert_id" />
+          </Key>
+          <Property Name="advert_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="title" Type="text" Nullable="false" />
+          <Property Name="brief" Type="text" Nullable="false" />
+          <Property Name="content" Type="text" Nullable="false" />
+          <Property Name="picture" Type="text" Nullable="false" />
+          <Property Name="advert_type" Type="int" Nullable="false" />
+          <Property Name="rank" Type="int" Nullable="false" />
+          <Property Name="start_time" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="end_time" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="audit_status" Type="uint" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="area_code_all">
+          <Key>
+            <PropertyRef Name="item_id" />
+          </Key>
+          <Property Name="item_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="area_name" Type="text" Nullable="false" />
+          <Property Name="area_short_name" Type="text" Nullable="false" />
+          <Property Name="area_code" Type="text" Nullable="false" />
+          <Property Name="regulation" Type="text" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_all">
+          <Key>
+            <PropertyRef Name="article_id" />
+          </Key>
+          <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="cover_image" Type="text" Nullable="false" />
+          <Property Name="title" Type="text" Nullable="false" />
+          <Property Name="brief_content" Type="text" Nullable="false" />
+          <Property Name="mark_content" Type="longtext" Nullable="false" />
+          <Property Name="tag_ids" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="edit_type" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="audit_status" Type="int" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_comment">
+          <Key>
+            <PropertyRef Name="comment_id" />
+          </Key>
+          <Property Name="comment_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="comment_content" Type="text" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_draft">
+          <Key>
+            <PropertyRef Name="draft_id" />
+          </Key>
+          <Property Name="draft_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="title" Type="text" Nullable="false" />
+          <Property Name="brief_content" Type="text" Nullable="false" />
+          <Property Name="mark_content" Type="longtext" Nullable="false" />
+          <Property Name="cover_image" Type="text" Nullable="false" />
+          <Property Name="tag_ids" Type="text" Nullable="false" />
+          <Property Name="edit_type" Type="varchar" MaxLength="24" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_reply">
+          <Key>
+            <PropertyRef Name="reply_id" />
+          </Key>
+          <Property Name="reply_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="reply_comment_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="reply_content" Type="longtext" Nullable="false" />
+          <Property Name="reply_to_reply_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="reply_to_user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="reply_type" Type="int" Nullable="false" />
+          <Property Name="reply_status" Type="int" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_tag">
+          <Key>
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="tag_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="tag_name" Type="text" Nullable="false" />
+          <Property Name="icon" Type="text" Nullable="false" />
+          <Property Name="color" Type="text" Nullable="false" />
+          <Property Name="back_ground" Type="text" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_view">
+          <Key>
+            <PropertyRef Name="article_id" />
+          </Key>
+          <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="view_count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="feedback_all">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="pic_list" Type="text" Nullable="false" />
+          <Property Name="content" Type="text" Nullable="false" />
+          <Property Name="audit_status" Type="int" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="notify_all">
+          <Key>
+            <PropertyRef Name="notify_id" />
+          </Key>
+          <Property Name="notify_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="detail" Type="longtext" Nullable="false" />
+          <Property Name="notify_type" Type="int" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="report_all">
+          <Key>
+            <PropertyRef Name="report_id" />
+          </Key>
+          <Property Name="report_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="issue" Type="text" Nullable="false" />
+          <Property Name="prove_pic" Type="text" Nullable="false" />
+          <Property Name="describe" Type="longtext" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="report_option">
+          <Key>
+            <PropertyRef Name="option_id" />
+          </Key>
+          <Property Name="option_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="option_name" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="topic_all">
+          <Key>
+            <PropertyRef Name="topic_id" />
+          </Key>
+          <Property Name="topic_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="topic_circle_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="content" Type="longtext" Nullable="false" />
+          <Property Name="pic_list" Type="text" Nullable="false" />
+          <Property Name="url" Type="text" Nullable="false" />
+          <Property Name="topic" Type="text" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="topic_circle">
+          <Key>
+            <PropertyRef Name="circle_id" />
+          </Key>
+          <Property Name="circle_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="circle_name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="icon" Type="text" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_all">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="avatar_large" Type="text" Nullable="false" />
+          <Property Name="level" Type="int" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="phone_verified" Type="int" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="email_verified" Type="int" Nullable="false" />
+          <Property Name="qq_openid" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="qq_nickname" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="qq_figureurl" Type="varchar" MaxLength="255" />
+          <Property Name="qq_verified" Type="int" Nullable="false" />
+          <Property Name="wechat_nickname" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="wechat_verified" Type="int" Nullable="false" />
+          <Property Name="weibo_nickname" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="weibo_verified" Type="int" Nullable="false" />
+          <Property Name="job_title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ip_address" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="place" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="update_time" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="register_time" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_collect">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="collection_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="item_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_collection">
+          <Key>
+            <PropertyRef Name="collection_id" />
+          </Key>
+          <Property Name="collection_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="collection_name" Type="text" Nullable="false" />
+          <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_digg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="digg_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="type" Type="int" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_follow">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="follow_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="follow_type" Type="int" Nullable="false" />
+          <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_locate">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="ip" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="place" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="mac" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="time" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="huhuModelStoreContainer">
+          <EntitySet Name="admin_all" EntityType="Self.admin_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="admin_manager" EntityType="Self.admin_manager" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="advert_all" EntityType="Self.advert_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="area_code_all" EntityType="Self.area_code_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="article_all" EntityType="Self.article_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="article_comment" EntityType="Self.article_comment" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="article_draft" EntityType="Self.article_draft" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="article_reply" EntityType="Self.article_reply" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="article_tag" EntityType="Self.article_tag" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="article_view" EntityType="Self.article_view" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="feedback_all" EntityType="Self.feedback_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="notify_all" EntityType="Self.notify_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="report_all" EntityType="Self.report_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="report_option" EntityType="Self.report_option" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="topic_all" EntityType="Self.topic_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="topic_circle" EntityType="Self.topic_circle" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="user_all" EntityType="Self.user_all" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="user_collect" EntityType="Self.user_collect" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="user_collection" EntityType="Self.user_collection" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="user_digg" EntityType="Self.user_digg" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="user_follow" EntityType="Self.user_follow" Schema="huhu_v2" store:Type="Tables" />
+          <EntitySet Name="user_locate" EntityType="Self.user_locate" Schema="huhu_v2" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="huhuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admin_all">
+          <Key>
+            <PropertyRef Name="admin_id" />
+          </Key>
+          <Property Name="admin_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="power" Type="Int32" Nullable="false" />
+          <Property Name="audit_status" Type="Int32" Nullable="false" />
+          <Property Name="update_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="register_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="admin_manager">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="admin_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ip" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="location" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="advert_all">
+          <Key>
+            <PropertyRef Name="advert_id" />
+          </Key>
+          <Property Name="advert_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="brief" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="picture" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="advert_type" Type="Int32" Nullable="false" />
+          <Property Name="rank" Type="Int32" Nullable="false" />
+          <Property Name="start_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="end_time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="audit_status" Type="Int64" Nullable="false" />
+          <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="area_code_all">
+          <Key>
+            <PropertyRef Name="item_id" />
+          </Key>
+          <Property Name="item_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="area_name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="area_short_name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="area_code" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="regulation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_comment">
+          <Key>
+            <PropertyRef Name="comment_id" />
+          </Key>
+          <Property Name="comment_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="comment_content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_draft">
+          <Key>
+            <PropertyRef Name="draft_id" />
+          </Key>
+          <Property Name="draft_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="brief_content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mark_content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cover_image" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tag_ids" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="edit_type" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_reply">
+          <Key>
+            <PropertyRef Name="reply_id" />
+          </Key>
+          <Property Name="reply_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reply_comment_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reply_content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reply_to_reply_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reply_to_user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reply_type" Type="Int32" Nullable="false" />
+          <Property Name="reply_status" Type="Int32" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_view">
+          <Key>
+            <PropertyRef Name="article_id" />
+          </Key>
+          <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="view_count" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="feedback_all">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pic_list" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="audit_status" Type="Int32" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="notify_all">
+          <Key>
+            <PropertyRef Name="notify_id" />
+          </Key>
+          <Property Name="notify_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="detail" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="notify_type" Type="Int32" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="report_all">
+          <Key>
+            <PropertyRef Name="report_id" />
+          </Key>
+          <Property Name="report_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="article_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="issue" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prove_pic" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="describe" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="report_option">
+          <Key>
+            <PropertyRef Name="option_id" />
+          </Key>
+          <Property Name="option_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="option_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="topic_all">
+          <Key>
+            <PropertyRef Name="topic_id" />
+          </Key>
+          <Property Name="topic_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="topic_circle_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pic_list" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="url" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="topic" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="topic_circle">
+          <Key>
+            <PropertyRef Name="circle_id" />
+          </Key>
+          <Property Name="circle_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="circle_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="icon" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_collect">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="collection_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="item_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_collection">
+          <Key>
+            <PropertyRef Name="collection_id" />
+          </Key>
+          <Property Name="collection_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="collection_name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mtime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_digg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="digg_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="Int32" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_follow">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="follow_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="follow_type" Type="Int32" Nullable="false" />
+          <Property Name="ctime" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_locate">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ip" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="place" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mac" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="huhuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admin_all" EntityType="Self.admin_all" />
+          <EntitySet Name="admin_manager" EntityType="Self.admin_manager" />
+          <EntitySet Name="advert_all" EntityType="Self.advert_all" />
+          <EntitySet Name="area_code_all" EntityType="Self.area_code_all" />
+          <EntitySet Name="article_comment" EntityType="Self.article_comment" />
+          <EntitySet Name="article_draft" EntityType="Self.article_draft" />
+          <EntitySet Name="article_reply" EntityType="Self.article_reply" />
+          <EntitySet Name="article_view" EntityType="Self.article_view" />
+          <EntitySet Name="feedback_all" EntityType="Self.feedback_all" />
+          <EntitySet Name="notify_all" EntityType="Self.notify_all" />
+          <EntitySet Name="report_all" EntityType="Self.report_all" />
+          <EntitySet Name="report_option" EntityType="Self.report_option" />
+          <EntitySet Name="topic_all" EntityType="Self.topic_all" />
+          <EntitySet Name="topic_circle" EntityType="Self.topic_circle" />
+          <EntitySet Name="user_collect" EntityType="Self.user_collect" />
+          <EntitySet Name="user_collection" EntityType="Self.user_collection" />
+          <EntitySet Name="user_digg" EntityType="Self.user_digg" />
+          <EntitySet Name="user_follow" EntityType="Self.user_follow" />
+          <EntitySet Name="user_locate" EntityType="Self.user_locate" />
+          <EntitySet Name="article_all" EntityType="huhuModel.article_all" />
+          <EntitySet Name="article_tag" EntityType="huhuModel.article_tag" />
+          <EntitySet Name="user_all" EntityType="huhuModel.user_all" />
+        </EntityContainer>
+        <EntityType Name="article_all">
+          <Key>
+            <PropertyRef Name="article_id" />
+          </Key>
+          <Property Name="article_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="cover_image" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="brief_content" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="mark_content" Type="String" Nullable="false" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="tag_ids" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="edit_type" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="audit_status" Type="Int32" Nullable="false" />
+          <Property Name="mtime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="ctime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="article_tag">
+          <Key>
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="tag_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="tag_name" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="icon" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="color" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="back_ground" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="mtime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="ctime" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="user_all">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="user_name" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="avatar_large" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="level" Type="Int32" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="phone_verified" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="email_verified" Type="Int32" Nullable="false" />
+          <Property Name="qq_openid" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="qq_nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="qq_figureurl" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="qq_verified" Type="Int32" Nullable="false" />
+          <Property Name="wechat_nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="wechat_verified" Type="Int32" Nullable="false" />
+          <Property Name="weibo_nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="weibo_verified" Type="Int32" Nullable="false" />
+          <Property Name="job_title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ip_address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="place" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="update_time" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="register_time" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="huhuModelStoreContainer" CdmEntityContainer="huhuEntities">
+          <EntitySetMapping Name="admin_all">
+            <EntityTypeMapping TypeName="huhuModel.admin_all">
+              <MappingFragment StoreEntitySet="admin_all">
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="power" ColumnName="power" />
+                <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+                <ScalarProperty Name="update_time" ColumnName="update_time" />
+                <ScalarProperty Name="register_time" ColumnName="register_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="admin_manager">
+            <EntityTypeMapping TypeName="huhuModel.admin_manager">
+              <MappingFragment StoreEntitySet="admin_manager">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="advert_all">
+            <EntityTypeMapping TypeName="huhuModel.advert_all">
+              <MappingFragment StoreEntitySet="advert_all">
+                <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="brief" ColumnName="brief" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="advert_type" ColumnName="advert_type" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="end_time" ColumnName="end_time" />
+                <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="area_code_all">
+            <EntityTypeMapping TypeName="huhuModel.area_code_all">
+              <MappingFragment StoreEntitySet="area_code_all">
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="area_name" ColumnName="area_name" />
+                <ScalarProperty Name="area_short_name" ColumnName="area_short_name" />
+                <ScalarProperty Name="area_code" ColumnName="area_code" />
+                <ScalarProperty Name="regulation" ColumnName="regulation" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_comment">
+            <EntityTypeMapping TypeName="huhuModel.article_comment">
+              <MappingFragment StoreEntitySet="article_comment">
+                <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="comment_content" ColumnName="comment_content" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_draft">
+            <EntityTypeMapping TypeName="huhuModel.article_draft">
+              <MappingFragment StoreEntitySet="article_draft">
+                <ScalarProperty Name="draft_id" ColumnName="draft_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="brief_content" ColumnName="brief_content" />
+                <ScalarProperty Name="mark_content" ColumnName="mark_content" />
+                <ScalarProperty Name="cover_image" ColumnName="cover_image" />
+                <ScalarProperty Name="tag_ids" ColumnName="tag_ids" />
+                <ScalarProperty Name="edit_type" ColumnName="edit_type" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_reply">
+            <EntityTypeMapping TypeName="huhuModel.article_reply">
+              <MappingFragment StoreEntitySet="article_reply">
+                <ScalarProperty Name="reply_id" ColumnName="reply_id" />
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="reply_comment_id" ColumnName="reply_comment_id" />
+                <ScalarProperty Name="reply_content" ColumnName="reply_content" />
+                <ScalarProperty Name="reply_to_reply_id" ColumnName="reply_to_reply_id" />
+                <ScalarProperty Name="reply_to_user_id" ColumnName="reply_to_user_id" />
+                <ScalarProperty Name="reply_type" ColumnName="reply_type" />
+                <ScalarProperty Name="reply_status" ColumnName="reply_status" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_view">
+            <EntityTypeMapping TypeName="huhuModel.article_view">
+              <MappingFragment StoreEntitySet="article_view">
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+                <ScalarProperty Name="view_count" ColumnName="view_count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="feedback_all">
+            <EntityTypeMapping TypeName="huhuModel.feedback_all">
+              <MappingFragment StoreEntitySet="feedback_all">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="pic_list" ColumnName="pic_list" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="notify_all">
+            <EntityTypeMapping TypeName="huhuModel.notify_all">
+              <MappingFragment StoreEntitySet="notify_all">
+                <ScalarProperty Name="notify_id" ColumnName="notify_id" />
+                <ScalarProperty Name="detail" ColumnName="detail" />
+                <ScalarProperty Name="notify_type" ColumnName="notify_type" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="report_all">
+            <EntityTypeMapping TypeName="huhuModel.report_all">
+              <MappingFragment StoreEntitySet="report_all">
+                <ScalarProperty Name="report_id" ColumnName="report_id" />
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+                <ScalarProperty Name="issue" ColumnName="issue" />
+                <ScalarProperty Name="prove_pic" ColumnName="prove_pic" />
+                <ScalarProperty Name="describe" ColumnName="describe" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="report_option">
+            <EntityTypeMapping TypeName="huhuModel.report_option">
+              <MappingFragment StoreEntitySet="report_option">
+                <ScalarProperty Name="option_id" ColumnName="option_id" />
+                <ScalarProperty Name="option_name" ColumnName="option_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="topic_all">
+            <EntityTypeMapping TypeName="huhuModel.topic_all">
+              <MappingFragment StoreEntitySet="topic_all">
+                <ScalarProperty Name="topic_id" ColumnName="topic_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="topic_circle_id" ColumnName="topic_circle_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="pic_list" ColumnName="pic_list" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="topic" ColumnName="topic" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="topic_circle">
+            <EntityTypeMapping TypeName="huhuModel.topic_circle">
+              <MappingFragment StoreEntitySet="topic_circle">
+                <ScalarProperty Name="circle_id" ColumnName="circle_id" />
+                <ScalarProperty Name="circle_name" ColumnName="circle_name" />
+                <ScalarProperty Name="icon" ColumnName="icon" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_collect">
+            <EntityTypeMapping TypeName="huhuModel.user_collect">
+              <MappingFragment StoreEntitySet="user_collect">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="collection_id" ColumnName="collection_id" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_collection">
+            <EntityTypeMapping TypeName="huhuModel.user_collection">
+              <MappingFragment StoreEntitySet="user_collection">
+                <ScalarProperty Name="collection_id" ColumnName="collection_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="collection_name" ColumnName="collection_name" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_digg">
+            <EntityTypeMapping TypeName="huhuModel.user_digg">
+              <MappingFragment StoreEntitySet="user_digg">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="digg_id" ColumnName="digg_id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_follow">
+            <EntityTypeMapping TypeName="huhuModel.user_follow">
+              <MappingFragment StoreEntitySet="user_follow">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="follow_id" ColumnName="follow_id" />
+                <ScalarProperty Name="follow_type" ColumnName="follow_type" />
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_locate">
+            <EntityTypeMapping TypeName="huhuModel.user_locate">
+              <MappingFragment StoreEntitySet="user_locate">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="place" ColumnName="place" />
+                <ScalarProperty Name="mac" ColumnName="mac" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_all">
+            <EntityTypeMapping TypeName="huhuModel.article_all">
+              <MappingFragment StoreEntitySet="article_all">
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="audit_status" ColumnName="audit_status" />
+                <ScalarProperty Name="edit_type" ColumnName="edit_type" />
+                <ScalarProperty Name="tag_ids" ColumnName="tag_ids" />
+                <ScalarProperty Name="mark_content" ColumnName="mark_content" />
+                <ScalarProperty Name="brief_content" ColumnName="brief_content" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="cover_image" ColumnName="cover_image" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_tag">
+            <EntityTypeMapping TypeName="huhuModel.article_tag">
+              <MappingFragment StoreEntitySet="article_tag">
+                <ScalarProperty Name="ctime" ColumnName="ctime" />
+                <ScalarProperty Name="mtime" ColumnName="mtime" />
+                <ScalarProperty Name="back_ground" ColumnName="back_ground" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="icon" ColumnName="icon" />
+                <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_all">
+            <EntityTypeMapping TypeName="huhuModel.user_all">
+              <MappingFragment StoreEntitySet="user_all">
+                <ScalarProperty Name="register_time" ColumnName="register_time" />
+                <ScalarProperty Name="update_time" ColumnName="update_time" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="place" ColumnName="place" />
+                <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+                <ScalarProperty Name="job_title" ColumnName="job_title" />
+                <ScalarProperty Name="weibo_verified" ColumnName="weibo_verified" />
+                <ScalarProperty Name="weibo_nickname" ColumnName="weibo_nickname" />
+                <ScalarProperty Name="wechat_verified" ColumnName="wechat_verified" />
+                <ScalarProperty Name="wechat_nickname" ColumnName="wechat_nickname" />
+                <ScalarProperty Name="qq_verified" ColumnName="qq_verified" />
+                <ScalarProperty Name="qq_figureurl" ColumnName="qq_figureurl" />
+                <ScalarProperty Name="qq_nickname" ColumnName="qq_nickname" />
+                <ScalarProperty Name="qq_openid" ColumnName="qq_openid" />
+                <ScalarProperty Name="email_verified" ColumnName="email_verified" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone_verified" ColumnName="phone_verified" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="avatar_large" ColumnName="avatar_large" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

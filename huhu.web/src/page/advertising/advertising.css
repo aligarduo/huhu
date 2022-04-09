@@ -1,0 +1,65 @@
+.stationery {
+    padding-top: 32px;
+    background-color: #efefef;
+    background-image: linear-gradient(#e7e6e6 1px, transparent 0),linear-gradient(90deg, #e7e6e6 1px, transparent 0);
+    background-size: 21px 21px, 21px 21px;
+    background-position: center;
+}
+ 
+.stationery:before,
+.stationery:after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background-color: #fff;
+    height: 24px;
+    box-shadow: 
+	60px 0 0 0 #fff,
+	calc(60px * 2) 0 0 0 #fff,
+	calc(60px * 3) 0 0 0 #fff,
+	calc(60px * 4) 0 0 0 #fff,
+	calc(60px * 5) 0 0 0 #fff, 
+	-60px 0 0 0 #fff,
+	calc(60px * -2) 0 0 0 #fff,
+	calc(60px * -3) 0 0 0 #fff,
+	calc(60px * -4) 0 0 0 #fff,
+	calc(60px * -5) 0 0 0 #fff;
+}
+
+.stationery:before {
+    top: 0;
+    width: 10px;
+}
+ 
+.stationery:after {
+    top: 18px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.advertising-info-block {
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	margin-bottom: 16px;
+}
+
+.advertising-info-block .advertising-meta-box {
+	margin: 10px 0;
+}
+
+.advertising-meta-box span{
+	font-size: 18px;
+	font-weight: 700;
+	color: rgb(134, 134, 134);
+	margin-right: 10px;
+}
+
+.advertising-info-block .advertising-meta-box .advertising-time {
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+}

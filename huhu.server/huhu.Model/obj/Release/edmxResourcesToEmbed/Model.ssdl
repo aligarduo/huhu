@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="huhuModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin_all">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="power" Type="int" Nullable="false" />
+    <Property Name="audit_status" Type="int" Nullable="false" />
+    <Property Name="update_time" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="register_time" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="admin_manager">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="admin_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="location" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="time" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="advert_all">
+    <Key>
+      <PropertyRef Name="advert_id" />
+    </Key>
+    <Property Name="advert_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="title" Type="text" Nullable="false" />
+    <Property Name="brief" Type="text" Nullable="false" />
+    <Property Name="content" Type="text" Nullable="false" />
+    <Property Name="picture" Type="text" Nullable="false" />
+    <Property Name="advert_type" Type="int" Nullable="false" />
+    <Property Name="rank" Type="int" Nullable="false" />
+    <Property Name="start_time" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="end_time" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="audit_status" Type="uint" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="area_code_all">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="area_name" Type="text" Nullable="false" />
+    <Property Name="area_short_name" Type="text" Nullable="false" />
+    <Property Name="area_code" Type="text" Nullable="false" />
+    <Property Name="regulation" Type="text" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_all">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="cover_image" Type="text" Nullable="false" />
+    <Property Name="title" Type="text" Nullable="false" />
+    <Property Name="brief_content" Type="text" Nullable="false" />
+    <Property Name="mark_content" Type="longtext" Nullable="false" />
+    <Property Name="tag_ids" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="edit_type" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="audit_status" Type="int" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_comment">
+    <Key>
+      <PropertyRef Name="comment_id" />
+    </Key>
+    <Property Name="comment_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="comment_content" Type="text" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_draft">
+    <Key>
+      <PropertyRef Name="draft_id" />
+    </Key>
+    <Property Name="draft_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="title" Type="text" Nullable="false" />
+    <Property Name="brief_content" Type="text" Nullable="false" />
+    <Property Name="mark_content" Type="longtext" Nullable="false" />
+    <Property Name="cover_image" Type="text" Nullable="false" />
+    <Property Name="tag_ids" Type="text" Nullable="false" />
+    <Property Name="edit_type" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_reply">
+    <Key>
+      <PropertyRef Name="reply_id" />
+    </Key>
+    <Property Name="reply_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="reply_comment_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="reply_content" Type="longtext" Nullable="false" />
+    <Property Name="reply_to_reply_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="reply_to_user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="reply_type" Type="int" Nullable="false" />
+    <Property Name="reply_status" Type="int" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_tag">
+    <Key>
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="tag_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="tag_name" Type="text" Nullable="false" />
+    <Property Name="icon" Type="text" Nullable="false" />
+    <Property Name="color" Type="text" Nullable="false" />
+    <Property Name="back_ground" Type="text" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_view">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="view_count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="feedback_all">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="pic_list" Type="text" Nullable="false" />
+    <Property Name="content" Type="text" Nullable="false" />
+    <Property Name="audit_status" Type="int" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notify_all">
+    <Key>
+      <PropertyRef Name="notify_id" />
+    </Key>
+    <Property Name="notify_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="detail" Type="longtext" Nullable="false" />
+    <Property Name="notify_type" Type="int" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="report_all">
+    <Key>
+      <PropertyRef Name="report_id" />
+    </Key>
+    <Property Name="report_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="article_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="issue" Type="text" Nullable="false" />
+    <Property Name="prove_pic" Type="text" Nullable="false" />
+    <Property Name="describe" Type="longtext" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="report_option">
+    <Key>
+      <PropertyRef Name="option_id" />
+    </Key>
+    <Property Name="option_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="option_name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="topic_all">
+    <Key>
+      <PropertyRef Name="topic_id" />
+    </Key>
+    <Property Name="topic_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="topic_circle_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="content" Type="longtext" Nullable="false" />
+    <Property Name="pic_list" Type="text" Nullable="false" />
+    <Property Name="url" Type="text" Nullable="false" />
+    <Property Name="topic" Type="text" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="topic_circle">
+    <Key>
+      <PropertyRef Name="circle_id" />
+    </Key>
+    <Property Name="circle_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="circle_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="icon" Type="text" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_all">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="avatar_large" Type="text" Nullable="false" />
+    <Property Name="level" Type="int" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="phone_verified" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="email_verified" Type="int" Nullable="false" />
+    <Property Name="qq_openid" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="qq_nickname" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="qq_figureurl" Type="varchar" MaxLength="255" />
+    <Property Name="qq_verified" Type="int" Nullable="false" />
+    <Property Name="wechat_nickname" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="wechat_verified" Type="int" Nullable="false" />
+    <Property Name="weibo_nickname" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="weibo_verified" Type="int" Nullable="false" />
+    <Property Name="job_title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ip_address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="place" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="update_time" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="register_time" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_collect">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="collection_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="item_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_collection">
+    <Key>
+      <PropertyRef Name="collection_id" />
+    </Key>
+    <Property Name="collection_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="collection_name" Type="text" Nullable="false" />
+    <Property Name="mtime" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_digg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="digg_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="type" Type="int" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_follow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="follow_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="follow_type" Type="int" Nullable="false" />
+    <Property Name="ctime" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_locate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="place" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="mac" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="time" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="huhuModelStoreContainer">
+    <EntitySet Name="admin_all" EntityType="Self.admin_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="admin_manager" EntityType="Self.admin_manager" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="advert_all" EntityType="Self.advert_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="area_code_all" EntityType="Self.area_code_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="article_all" EntityType="Self.article_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="article_comment" EntityType="Self.article_comment" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="article_draft" EntityType="Self.article_draft" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="article_reply" EntityType="Self.article_reply" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="article_tag" EntityType="Self.article_tag" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="article_view" EntityType="Self.article_view" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="feedback_all" EntityType="Self.feedback_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="notify_all" EntityType="Self.notify_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="report_all" EntityType="Self.report_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="report_option" EntityType="Self.report_option" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="topic_all" EntityType="Self.topic_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="topic_circle" EntityType="Self.topic_circle" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="user_all" EntityType="Self.user_all" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="user_collect" EntityType="Self.user_collect" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="user_collection" EntityType="Self.user_collection" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="user_digg" EntityType="Self.user_digg" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="user_follow" EntityType="Self.user_follow" Schema="huhu_v2" store:Type="Tables" />
+    <EntitySet Name="user_locate" EntityType="Self.user_locate" Schema="huhu_v2" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

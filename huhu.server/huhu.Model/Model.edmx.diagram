@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0534755bb84e48a2ad6c911f72b062d6" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="huhuModel.admin_all" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.admin_manager" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.advert_all" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.area_code_all" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.article_comment" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.article_draft" Width="1.5" PointX="2.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.article_reply" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.article_view" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.feedback_all" Width="1.5" PointX="4.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.notify_all" Width="1.5" PointX="2.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.report_all" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.report_option" Width="1.5" PointX="10.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.topic_all" Width="1.5" PointX="4.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.topic_circle" Width="1.5" PointX="10.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.user_collect" Width="1.5" PointX="6.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.user_collection" Width="1.5" PointX="12.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.user_digg" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.user_follow" Width="1.5" PointX="6.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.user_locate" Width="1.5" PointX="12.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="huhuModel.article_all" Width="1.5" PointX="2.75" PointY="8.625" />
+        <EntityTypeShape EntityType="huhuModel.article_tag" Width="1.5" PointX="6.75" PointY="7.875" />
+        <EntityTypeShape EntityType="huhuModel.user_all" Width="1.5" PointX="8.75" PointY="2.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

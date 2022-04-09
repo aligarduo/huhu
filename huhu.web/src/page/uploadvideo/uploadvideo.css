@@ -1,0 +1,390 @@
+.video-upload {
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 700px;
+    padding: 56px 0;
+    margin: 64px auto;
+    border: 1px dashed transparent;
+    border-radius: 4px;
+}
+
+.video-upload-iconbg {
+    --bg-size: 125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: var(--bg-size);
+    height: var(--bg-size);
+    border-radius: 50%;
+    background-color: #f6f6f6;
+}
+
+.video-upload-icon {
+    --icon-size: 75px;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color: #8590a6;
+}
+
+.video-upload-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 40px;
+    line-height: 33px;
+}
+
+.video-upload-title {
+    color: #444;
+}
+
+.video-upload-buttongroup {
+    margin-top: 20px;
+}
+
+.video-upload-fileinput {
+    display: none;
+}
+
+.video-upload-button {
+    width: 120px;
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    border-radius: 3px;
+    color: #fff;
+    border-color: #06f;
+    background-color: #06f;
+}
+
+.video-upload-button:hover {
+    border-color: #005ce6;
+    background-color: #005ce6
+}
+
+.video-upload-uploadhint {
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.video-upload-footer {
+    font-size: 14px;
+    line-height: 22px;
+    color: #8590A6;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.video-upload-footer a {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+
+.video-upload--dragging {
+    border-color: #d3d3d3;
+    padding-top: 43px;
+}
+
+.video-upload-iconbg--dragging {
+    --dragging-bg-size: calc(var(--bg-size)*1.2);
+    width: var(--dragging-bg-size);
+    height: var(--dragging-bg-size);
+    background-color: rgba(0,102,255,.08)
+}
+
+.video-upload-icon--dragging {
+    --dragging-icon-size: calc(var(--icon-size)*1.2);
+    width: var(--dragging-icon-size);
+    height: var(--dragging-icon-size);
+    color: #06f
+}
+
+.video-upload-title--dragging {
+    margin-top: 28px;
+}
+
+
+
+
+/**/
+.video-upload-affirm {
+    width: 100%;
+    height: 600px;
+    margin-top: 28px;
+}
+
+.affirm-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 33px;
+    color: #121212;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.upload-affirm {
+    width: 100%;
+    height: calc(100% - 33px);
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ebebeb;
+}
+
+.affirm-left {
+    height: 100%;
+    overflow: auto;
+    width: 470px;
+    border-top: 1px solid #ebebeb;
+}
+
+.affirm-right {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #ebebeb;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 32px 0 60px 32px;
+}
+
+.affirm-left .upload-list {
+    min-width: 0px;
+    height: 76px;
+    padding: 16px;
+    margin: 5px 5px 5px 0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 1px solid bisque;
+    background-color: bisque;
+}
+
+.upload-list .upload-filename {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 14px;
+    color: rgb(0, 102, 255);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.upload-list .upload-state {
+    box-sizing: border-box;
+    margin: 8px 0px 0px;
+    min-width: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+}
+
+.upload-list .upload-state span:nth-child(1) {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: rgb(103, 194, 58);
+}
+
+.upload-list .upload-state span:nth-child(2) {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 16px;
+    min-width: 0px;
+    color: rgb(133, 144, 166);
+}
+
+/**/
+.affirm-right .affirm-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 640px;
+    margin-bottom: 32px;
+}
+
+.affirm-item .affirm-hint {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 105px;
+    flex: 0 0 105px;
+    color: #121212;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.affirm-item .affirm-hint:after {
+    content: " *";
+    color: #f1403c;
+}
+
+.affirm-item .affirm-cover-box {
+    position: relative;
+    border-radius: 3px;
+    height: 140px;
+    width: 224px;
+}
+
+.affirm-cover-box .cover-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.Input-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 180px;
+    height: 34px;
+    padding: 4px 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background .2s,border .2s;
+    transition: background .2s,border .2s;
+}
+
+.Input-wrapper.Input-wrapper--large {
+    height: auto;
+    padding: 6px 12px;
+}
+
+.VideoUploadForm-input {
+    width: 100%;
+}
+
+input.Input {
+    color: #121212;
+    height: 24px;
+    line-height: 24px;
+}
+
+.Input {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    padding: 0;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background: transparent;
+    border: none;
+    resize: none;
+}
+
+.VideoUploadForm-input.VideoUploadForm-input--multiline {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.Input-wrapper.Input-wrapper--large {
+    height: auto;
+    padding: 6px 12px;
+}
+
+.VideoUploadForm-itemLimit--multiline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 18px;
+    margin-top: 6px;
+}
+
+.VideoUploadForm-itemLimit {
+    margin-left: 12px;
+    font-size: 12px;
+    color: #8590a6;
+}
+
+.VideoUploadForm-buttonGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 24px 0 0 246px;
+}
+
+.Button {
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.Button--primary.Button--blue {
+    color: #fff;
+    background-color: #06f;
+}
+.VideoUploadForm-submitButton {
+    margin-right: 12px;
+}
+.Button--blue {
+    color: #06f;
+    border-color: #06f;
+}
+.Button {
+    color: #8590a6;
+}
+
+.Button--secondary.Button--blue {
+    color: #06f;
+    background: rgba(0,102,255,.1);
+    border-color: transparent;
+}

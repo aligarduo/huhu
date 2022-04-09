@@ -1,0 +1,150 @@
+body.published-view .app-open-button{
+    display: none;
+}
+
+.published-view {
+    width: 960px;
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.published-view .published-thanks {
+    padding-top: 138px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-image: url(../../../assets/images/svg/published-ok.svg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100px;
+    font-size: 16px;
+    color: #666
+}
+
+.published-view .published-share-content {
+    margin-left: 128px;
+    margin-right: 128px;
+    padding: 40px 20px 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    margin-bottom: 10px;
+    border-radius: 30px;
+    text-align: center
+}
+
+.published-view .published-share-content .published-title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 36px;
+    margin-bottom: 40px;
+    display: block;
+    color: inherit;
+    text-decoration: underline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1
+}
+
+.published-view .published-share-content .rule-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #007fff;
+    line-height: 22px;
+    margin-bottom: 40px;
+    display: inline-block
+}
+
+.published-view .published-share-content .share-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px
+}
+
+.published-view .published-share-content .share-list .share-wechat,
+.published-view .published-share-content .share-list .share-weibo,
+.published-view .published-share-content .share-list .share-link {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    font-size: 1rem;
+    padding: .4rem 1.74rem;
+    cursor: pointer;
+    margin: .4rem .6rem .4rem 10px;
+    line-height: 2rem;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.published-view .published-share-content .share-list .share-wechat .inline,
+.published-view .published-share-content .share-list .share-weibo .inline,
+.published-view .published-share-content .share-list .share-link .inline {
+    height: 16px;
+    vertical-align: sub;
+    margin-right: .6rem
+}
+
+.share-prompt{
+    min-width: 56px;
+}
+
+.published-view .handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 20px
+}
+
+.published-view .handle button {
+    width: 140px;
+    height: 40px;
+    font-size: 16px
+}
+
+.published-view .handle .back-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007fff;
+    cursor: pointer
+}
+
+@media (max-width: 980px){
+    .published-view{
+        width: inherit
+    }
+}
+
+@media (max-width: 660px){
+    .published-view .published-share-content .share-list .share-wechat,
+    .published-view .published-share-content .share-list .share-weibo,
+    .published-view .published-share-content .share-list .share-link {
+        padding: .2rem 1.74rem;
+    }
+
+    .published-view .published-share-content .share-list .share-wechat span,
+    .published-view .published-share-content .share-list .share-weibo span,
+    .published-view .published-share-content .share-list .share-link span {
+        display: none;
+    }
+
+    .published-view .published-share-content .share-list .share-wechat .inline,
+    .published-view .published-share-content .share-list .share-weibo .inline,
+    .published-view .published-share-content .share-list .share-link .inline {
+        margin-right: 0rem
+    }
+}
+
+@media (max-width: 720px){
+    .published-view .published-share-content{
+       margin: 0 10px;
+       padding: 40px 20px;
+    }
+    .published-view .handle{
+        margin-top: 0px;
+    }
+}
